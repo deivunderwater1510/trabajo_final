@@ -1,11 +1,9 @@
 ---
 # --- Metadatos Básicos ---
-title: "Título del Trabajo Final"
+title: "De la estadistica a la victoria"
 author:
-   - deiv
-   - Segundo participante
-   - Tercer participante
-date: "Febrero 2026"
+   - David Linarez
+date: "Abril 2026"
 
 # --- Metadatos Específicos de Plantilla ---
 degree: "Computación I"
@@ -33,7 +31,7 @@ output:
 
 # --- Resumen (Abstract) ---
 abstract: |
-  Resumen del trabajo de investigación...
+  El presente trabajo tiene como objetivo determinar la formación ideal de un equipo a través de modelos estadísticos. Mediante el procesamiento de las estadísticas base de cada categoría, se busca desarrollar una estructura equilibrada y competitiva que maximice el rendimiento colectivo.
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +55,8 @@ library(scales)
 
 \chapter*{Introducción}
 
-Introducción del trabajo de investigación
+Históricamente, la experiencia de muchos jugadores de Pokémon comenzó con una estrategia novata, que consiste en fortalecer a un único pokemon, casi siempre el pokemon "favorito" hasta que su nivel superara cualquier obstáculo por fuerza bruta. Sin embargo, al analizar el juego desde una perspectiva técnica y competitiva, surge una interrogante fundamental ¿cómo se construye una formación verdaderamente equilibrada?.
+El presente trabajo trasciende la preferencia individual para proponer un modelo estadístico de selección. El objetivo es ofrecer, tanto a jugadores veteranos como a novatos, una metodología clara para estructurar equipos basados en sus tipologías predilectas, garantizando que la sinergia y las estadísticas base trabajen en favor de un rendimiento óptimo en combate. 
 
 \chapter{Planteamiento del Problema}
 Describir planteamiento del problema\
