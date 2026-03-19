@@ -55,38 +55,43 @@ library(scales)
 
 \chapter*{Introducción}
 
-Históricamente, la experiencia de muchos jugadores de Pokémon comenzó con una estrategia novata, que consiste en fortalecer a un único pokemon, casi siempre el pokemon "favorito" hasta que su nivel superara cualquier obstáculo por fuerza bruta. Sin embargo, al analizar el juego desde una perspectiva técnica y competitiva, surge una interrogante fundamental ¿cómo se construye una formación verdaderamente equilibrada?.
+Históricamente, la experiencia de muchos jugadores de Pokémon comenzó con una estrategia novata, que consiste en fortalecer a un único pokemon, casi siempre el pokemon "favorito" hasta que su nivel superara cualquier obstáculo por fuerza bruta. Sin embargo, al analizar el juego desde una perspectiva técnica y competitiva, surge una interrogante fundamental ¿cómo se construye una formación verdaderamente equilibrada?
 El presente trabajo trasciende la preferencia individual para proponer un modelo estadístico de selección. El objetivo es ofrecer, tanto a jugadores veteranos como a novatos, una metodología clara para estructurar equipos basados en sus tipologías predilectas, garantizando que la sinergia y las estadísticas base trabajen en favor de un rendimiento óptimo en combate. 
 
 \chapter{Planteamiento del Problema}
 Describir planteamiento del problema\
 
-Argumento final. Debido a esto, se plantea las siguientes preguntas de investigación:\
+Dado que un buen equipo depende de la estabilidad y especialización de sus pokemones, se plantea las siguientes preguntas de investigación:\
 
 
-\textbf{1.}	Pregunta1\
+\textbf{1.}	¿Qué tipos ofrecen las estadísticas más ofensivas?
 
-\textbf{2.}	Pregunta2\
+\textbf{2.}	¿Qué tipos ofrecen las estadísticas más defensivas?
 
-\textbf{3.}	Pregunta3\
+\textbf{3.}	¿Qué tipos ofrecen las estadísticas más veloces?
+
+\textbf{4.} ¿Cual es tu estrategia al momento de jugar (ofensivo o defensivo)?
+
 
 
 \section{Justificación}
 
-Justificación del trabajo de investigación\
+La presente investigación se justifica en la necesidad de profesionalizar los criterios de selección en el ámbito competitivo de Pokémon. Ante un universo de más de mil especies, la toma de decisiones suele basarse en la intuición, lo que genera desequilibrios en el combate.
+
+Desde un punto de vista estadístico, este trabajo es relevante porque permite aplicar medidas de dispersión para reducir la incertidumbre del jugador. Al identificar qué tipos son más consistentes y cuáles más erráticos, se ofrece una guía técnica que beneficia tanto a jugadores principiantes, facilitando su curva de aprendizaje, como a competidores avanzados que buscan optimizar sus estrategias mediante el análisis de datos.\
 
 \section{Objetivos}
  
 \subsection{Objetivo General}
 \begin{itemize}
-  \item{Describir objetivo general del trabajo de investigación}
+  \item{Analizar las estadísticas base(HP, Atk, Def, Sp. Atk, Sp. Def y Speed) de las diferentes tipologías de Pokémon para determinar los perfiles de rendimiento más destacados por categoría.}
 \end{itemize}
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-  \item{Describir objetivo 1 del trabajo de investigación}
-  \item{Describir objetivo 2 del trabajo de investigación}
-  \item{Describir objetivo 3 del trabajo de investigación}
+  \item{Identificar las medidas de tendencia central (media) de cada estadística base (HP, Atk, Def, Sp. Atk, Sp. Def y Speed) desglosadas por tipo de Pokémon para establecer un perfil promedio por categoría.}
+  \item{Calcular las medidas de dispersión (varianza y desviación estándar) de los atributos físicos y especiales por cada tipo, con el fin de determinar qué categorías son más consistentes o especialistas en sus roles de combate.}
+  \item{Clasificar los tipos de Pokémon en perfiles de rendimiento}
 \end{itemize}
 
 
