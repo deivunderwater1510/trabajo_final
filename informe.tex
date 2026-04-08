@@ -129,10 +129,29 @@ de un rendimiento óptimo en combate.
 
 \chapter{Planteamiento del Problema}
 
-Describir planteamiento del problema\\
+Desde su creación, la franquicia Pokémon ha evolucionado hacia un
+ecosistema competitivo de alta complejidad donde la victoria no depende
+del azar, sino de la optimización matemática de recursos. Para un
+entrenador o analista, el desafío principal radica en la selección de un
+equipo equilibrado, enfrentándose a una variabilidad extrema en las
+combinaciones de tipos y naturalezas que definen el rendimiento en
+combate.
 
-Dado que un buen equipo depende de la estabilidad y especialización de
-sus pokemones, se plantea las siguientes preguntas de investigación:\\
+Desde una perspectiva de análisis estadístico, el problema no consiste
+solo en elegir criaturas populares, sino en identificar los puntos altos
+de las estadísticas base (HP, Atk, Def, Sp. Atk, Sp. Def y Speed) según
+la tipología elemental. Factores como la especialización de roles
+(Atacantes, Tanques, Muros) introducen variables que dificultan la
+creación de un estándar de ``equipo ideal'' sin un estudio previo de los
+datos.
+
+La ausencia de un análisis descriptivo que cuantifique cómo los tipos
+elementales condicionan la esperanza de desempeño en cada estadística
+genera ineficiencias en la toma de decisiones tácticas y en la
+construcción de estrategias competitivas a largo plazo.
+
+Dado que un buen equipo depende de la estabilidad y especializaci´on de
+sus pokemones, se plantea las siguientes preguntas de investigaci´on::
 
 \textbf{1.} ¿Qué tipos ofrecen las estadísticas más ofensivas?
 
@@ -140,8 +159,10 @@ sus pokemones, se plantea las siguientes preguntas de investigación:\\
 
 \textbf{3.} ¿Qué tipos ofrecen las estadísticas más veloces?
 
-\textbf{4.} ¿Cual es tu estrategia al momento de jugar (ofensivo o
-defensivo)?
+\textbf{4.} ¿Cuales son los tipos de roles basados en las estadisticas
+de cada tipo pokemon?
+
+\textbf{5.} ¿Cuales son las debilidades de cada tipo pokemon?
 
 \section{Justificación}
 
@@ -163,69 +184,152 @@ datos.\\
 
 \subsection{Objetivo General}
 \begin{itemize}
-  \item{Analizar las estadísticas base(HP, Atk, Def, Sp. Atk, Sp. Def y Speed) de las diferentes tipologías de Pokémon para determinar los perfiles de rendimiento más destacados por categoría.}
+  \item{Analizar estadísticamente la distribución de las estadísticas base (HP, Atk, Def, Sp. Atk, Sp. Def y Speed) de cada tipologia pokemon para determinar patrones de especialización por rol, con el fin de fundamentar la toma de decisiones estratégicas en la construcción de equipos competitivos equilibrados.}
 \end{itemize}
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
   \item{Identificar las medidas de tendencia central (media) de cada estadística base (HP, Atk, Def, Sp. Atk, Sp. Def y Speed) desglosadas por tipo de Pokémon para establecer un perfil promedio por categoría.}
-  \item{Calcular las medidas de dispersión (varianza y desviación estándar) de los atributos físicos y especiales por cada tipo, con el fin de determinar qué categorías son más consistentes o especialistas en sus roles de combate.}
-  \item{Clasificar los tipos de Pokémon en perfiles de rendimiento}
+  \item{Calcular las medidas de dispersión (varianza y desviación estándar) especiales por cada tipo, con el fin de determinar qué categorías son más consistentes o especialistas en sus roles de combate.}
+  \item{Categorizar a la tipologia pokemon en roles funcionales (Atacantes, Tanques o Muros).}
+  \item{Evaluar el impacto de las debilidades y resistencias elementales en la estabilidad estructural de un equipo}
 \end{itemize}
-
-\section{Cobertura}
-
-\subsection{Horizontal}
-
-Describir la cobertura Horizontal del trabajo de investigación\\
 
 \begin{table}[ht]
 \centering
-\caption{Variables consideradas} 
-\resizebox{10cm}{!} {
-\begin{tabular}{ccc}
+\caption{Variables consideradas en el estudio} 
+\resizebox{12cm}{!} {
+\begin{tabular}{cll}
   \hline
-\ \ \ \ \ NOMBRE DE LA VARIABLE \\ 
+  \textbf{TIPO} & \textbf{VARIABLE} & \textbf{DESCRIPCIÓN} \\ 
   \hline
-   VARIABLE 1 \\ 
-VARIABLE 2\\ 
-VARIABLE n\\ 
-   \hline
+  Categórica & Type\_1 & Tipo elemental principal \\ 
+  Numérica & HP & Valor numerico que representa la capacidad de vida del pokemon. \\ 
+  Numérica & Attack  & Valor numerico que representa la capacidad de ataque ofensiva del pokemon. \\ 
+  Numérica & Defense & Valor numerico que representa la capacidad de defensa ofensiva del pokemon \\ 
+  Numérica & Sp.Atk & Valor numerico que representa la capacidad de ataque especial del pokemon. \\ 
+  Numérica & Sp.Def & Valor numerico que representa la capacidad de defensa especial del pokemon.\\ 
+  Numérica & Speed & Valor numerico que representa la velocidad del pokemon. \\ 
+  
 \end{tabular}
 }
 \end{table}
 
-\subsection{Vertical}
-
-Describir la cobertura Vertical del trabajo de investigación
-
-\section{Periodo de Referencia}
-
-Describir la fuente y el Periodo de Referencia utilizado en el trabajo
-de investigación
-
 \section{Variables}
 
-Describir la variable en estudio en el trabajo de investigación
+Las variables principales en estudio (Variables Dependientes/Objetivo)
+son las estadísticas base (HP, Attack, Defense, Sp. Atk, Sp. Def y
+Speed), las cuales representan el potencial competitivo de cada tipo de
+pokemon. Como variable explicativa o independiente, se encuentra la
+variable categorica Type\_1.
 
 \chapter{Marco Teórico}
 
 \section{Bases Teóricas}
 
-Resumen de las bases teoricas explicadas en el capitulo y su
-importancia\\
+La franquicia pokemon ha trascendido el ambito del entretenimiento para
+convertirse en un objeto de estudio. El nucleo funcional de este
+ecosistema reside en las estadisticas base (base stats), las cuales
+constituyen las variables intrínsecas que determinan el potencial de
+desempeño de cada pokemon.
 
-\subsection{Definición 1}
+A diferencia de otras variables modificables (como el entrenamiento o
+los objetos), las estadísticas base son constantes universales para cada
+especie. Esto permite tratarlas como datos faciles de ver, ideales para
+un analisis estadistico que busque identificar patrones de
+especialización. El equilibrio de un equipo competitivo no depende
+unicamente de la potencia individual, sino de la estratificación de
+roles basada en la distribución de estos valores numéricos.\\
 
-Descripción de la definición 1\\
+\subsection{Categorización de Roles Funcionales}
 
-\subsection{Definición 2}
+Desde una perspectiva analítica, los roles se definen mediante la
+distribución de los cuantiles de las estadísticas base:
 
-Descripción de la definición 2\\
+\begin{itemize}
+ \item {Atacantes: Pokemones con altos valores situados en las variables de Ataque, Ataque Especial y Velocidad, sacrificando generalmente sus capacidades defensivas.}
+ \item {Tanques: Pokemones que presentan un equilibrio estadístico, manteniendo una media elevada tanto en puntos de salud (HP) como en estadísticas ofensivas, permitiendo el intercambio de daño prolongado.}
+ \item {Muros: Categoría definida por una baja dispersión en valores altos de Defensa y Defensa Especial, cuya función principal es la absorción de daño y la interrupción del ritmo del oponente.} 
+ \end{itemize}
 
-\subsection{Definición n}
+\subsection{Estabilidad Estructural y Análisis de Vulnerabilidad}
 
-Descripción de la definición n\\
+Se define como la capacidad de un equipo para mitigar la probabilidad de
+daño efectivo mediante la diversificación de tipos. En términos
+estadísticos, un equipo con alta estabilidad estructural es aquel que
+presenta un balance neto positivo entre debilidades y resistencias,
+reduciendo la varianza del daño recibido ante diferentes configuraciones
+de rivales.\\
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:unnamed-chunk-1}Matriz de Efectividades: Acero a Hielo (Defensores)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{10}{12}\selectfont
+\begin{tabular}[t]{>{}lrrrrrrrrr}
+\toprule
+\textbf{ } & \textbf{Acero} & \textbf{Agua} & \textbf{Bicho} & \textbf{Dragón} & \textbf{Eléctrico} & \textbf{Fantasma} & \textbf{Fuego} & \textbf{Hada} & \textbf{Hielo}\\
+\midrule
+\textbf{Acero} & 0.5 & 0.5 & 1.0 & 1.0 & 0.5 & 1.0 & 0.5 & 2.0 & 2.0\\
+\textbf{Agua} & 1.0 & 0.5 & 1.0 & 0.5 & 1.0 & 1.0 & 2.0 & 1.0 & 1.0\\
+\textbf{Bicho} & 0.5 & 1.0 & 1.0 & 1.0 & 1.0 & 0.5 & 0.5 & 0.5 & 1.0\\
+\textbf{Dragón} & 0.5 & 1.0 & 1.0 & 2.0 & 1.0 & 1.0 & 1.0 & 0.0 & 1.0\\
+\textbf{Eléctrico} & 1.0 & 2.0 & 1.0 & 0.5 & 0.5 & 1.0 & 1.0 & 1.0 & 1.0\\
+\addlinespace
+\textbf{Fantasma} & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 2.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Fuego} & 2.0 & 0.5 & 2.0 & 0.5 & 1.0 & 1.0 & 0.5 & 1.0 & 2.0\\
+\textbf{Hada} & 0.5 & 1.0 & 1.0 & 2.0 & 1.0 & 1.0 & 0.5 & 1.0 & 1.0\\
+\textbf{Hielo} & 0.5 & 0.5 & 1.0 & 2.0 & 1.0 & 1.0 & 0.5 & 1.0 & 0.5\\
+\textbf{Lucha} & 2.0 & 1.0 & 0.5 & 1.0 & 1.0 & 0.0 & 1.0 & 0.5 & 2.0\\
+\addlinespace
+\textbf{Normal} & 0.5 & 1.0 & 1.0 & 1.0 & 1.0 & 0.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Planta} & 0.5 & 2.0 & 0.5 & 0.5 & 1.0 & 1.0 & 0.5 & 1.0 & 1.0\\
+\textbf{Psíquico} & 0.5 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Roca} & 0.5 & 1.0 & 2.0 & 1.0 & 1.0 & 1.0 & 2.0 & 1.0 & 2.0\\
+\textbf{Siniestro} & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 2.0 & 1.0 & 0.5 & 1.0\\
+\addlinespace
+\textbf{Tierra} & 2.0 & 1.0 & 0.5 & 1.0 & 2.0 & 1.0 & 2.0 & 1.0 & 1.0\\
+\textbf{Veneno} & 0.0 & 1.0 & 1.0 & 1.0 & 1.0 & 0.5 & 1.0 & 2.0 & 1.0\\
+\textbf{Volador} & 0.5 & 1.0 & 2.0 & 1.0 & 0.5 & 1.0 & 1.0 & 1.0 & 1.0\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[!h]
+\centering
+\caption{\label{tab:unnamed-chunk-1}Matriz de Efectividades: Lucha a Volador (Defensores)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\fontsize{10}{12}\selectfont
+\begin{tabular}[t]{>{}lrrrrrrrrr}
+\toprule
+\textbf{ } & \textbf{Lucha} & \textbf{Normal} & \textbf{Planta} & \textbf{Psíquico} & \textbf{Roca} & \textbf{Siniestro} & \textbf{Tierra} & \textbf{Veneno} & \textbf{Volador}\\
+\midrule
+\textbf{Acero} & 1.0 & 1 & 1.0 & 1.0 & 2.0 & 1.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Agua} & 1.0 & 1 & 0.5 & 1.0 & 2.0 & 1.0 & 2.0 & 1.0 & 1.0\\
+\textbf{Bicho} & 0.5 & 1 & 2.0 & 2.0 & 1.0 & 2.0 & 1.0 & 0.5 & 0.5\\
+\textbf{Dragón} & 1.0 & 1 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Eléctrico} & 1.0 & 1 & 0.5 & 1.0 & 1.0 & 1.0 & 0.0 & 1.0 & 2.0\\
+\addlinespace
+\textbf{Fantasma} & 1.0 & 0 & 1.0 & 2.0 & 1.0 & 0.5 & 1.0 & 1.0 & 1.0\\
+\textbf{Fuego} & 1.0 & 1 & 2.0 & 1.0 & 0.5 & 1.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Hada} & 2.0 & 1 & 1.0 & 1.0 & 1.0 & 2.0 & 1.0 & 0.5 & 1.0\\
+\textbf{Hielo} & 1.0 & 1 & 2.0 & 1.0 & 1.0 & 1.0 & 2.0 & 1.0 & 2.0\\
+\textbf{Lucha} & 1.0 & 2 & 1.0 & 0.5 & 2.0 & 2.0 & 1.0 & 0.5 & 0.5\\
+\addlinespace
+\textbf{Normal} & 1.0 & 1 & 1.0 & 1.0 & 0.5 & 1.0 & 1.0 & 1.0 & 1.0\\
+\textbf{Planta} & 1.0 & 1 & 0.5 & 1.0 & 2.0 & 1.0 & 2.0 & 0.5 & 0.5\\
+\textbf{Psíquico} & 2.0 & 1 & 1.0 & 0.5 & 1.0 & 0.0 & 1.0 & 2.0 & 1.0\\
+\textbf{Roca} & 0.5 & 1 & 1.0 & 1.0 & 1.0 & 1.0 & 0.5 & 1.0 & 2.0\\
+\textbf{Siniestro} & 0.5 & 1 & 1.0 & 2.0 & 1.0 & 0.5 & 1.0 & 1.0 & 1.0\\
+\addlinespace
+\textbf{Tierra} & 1.0 & 1 & 0.5 & 1.0 & 2.0 & 1.0 & 1.0 & 2.0 & 0.0\\
+\textbf{Veneno} & 1.0 & 1 & 2.0 & 1.0 & 0.5 & 1.0 & 0.5 & 0.5 & 1.0\\
+\textbf{Volador} & 2.0 & 1 & 2.0 & 1.0 & 0.5 & 1.0 & 1.0 & 1.0 & 1.0\\
+\bottomrule
+\end{tabular}}
+\end{table}
 
 \chapter{Marco Metódico}
 
