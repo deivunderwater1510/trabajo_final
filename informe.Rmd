@@ -210,13 +210,36 @@ kable(df_parte2, format = "latex", booktabs = TRUE,
 ```
 
 \chapter{Marco Metódico}
-En esta sección se presentan las metodologías y/o test necesarios relacionados con la práctica divulgada en el marco teórico, así como las fuentes de datos.
+En esta sección se detallan los procedimientos algorítmicos, las metodologías de procesamiento y las pruebas estadísticas. Se describe de manera sistemática el tratamiento de la fuente de datos 29. Pokemon.csv, aplicando técnicas de data wrangling (limpieza) y análisis descriptivo para determinar la significancia de las diferencias entre las estadísticas base de las tipologías elementales.
+
+El análisis se ha desarrollado utilizando el lenguaje de programación R bajo el entorno de desarrollo RStudio. Se ha adoptado el paradigma de programación funcional "Tidyverse" para la manipulación eficiente de grandes volúmenes de datos, asegurando un flujo de trabajo optimizado que permite la generación de graficos comparativos de alta precisión técnica.
  
 \section{Bases metódicas utilizadas en el trabajo de investigación}
 
-Desarrollo\
+La presente investigación se define bajo un enfoque cuantitativo con un alcance descriptivo-comparativo. Se centra en la recolección y el análisis de datos numéricos preexistentes, permitiendo el uso de herramientas estadísticas para identificar tendencias y patrones de comportamiento de manera objetiva. Un alcance descriptivo, el estudio busca caracterizar cada uno de los 18 tipos Pokémon según sus variables de rendimiento. Finalmente, se integra un alcance comparativo que permite contrastar las medias y varianzas entre los diversos tipos elementales, estableciendo así las superioridades o debilidades estadísticas que definen a cada categoría (Atacantes, Tanques, Muros).\
 
-\subsection{Item 1}
+\subsection{Procesamiento y Limpieza de Datos}
+
+```{r}
+df <- read_csv("29. Pokemon.csv")
+#Identifique mi datafrem
+
+df %>%
+ summarise(
+    v_tipo1 = sum(is.na(Type_1)),
+    v_hp    = sum(is.na(HP)),
+    v_atk   = sum(is.na(Attack)),
+    v_def   = sum(is.na(Defense)),
+    v_sp_atk = sum(is.na(`Sp.Atk`)),
+    v_sp_def = sum(is.na(`Sp.Def`)),
+    v_speed = sum(is.na(Speed)),
+  ) %>%
+  kable(caption = "Resumen de datos faltantes por columna")
+
+
+
+  
+```
 
 Descripción\
 
