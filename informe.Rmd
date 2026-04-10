@@ -229,23 +229,47 @@ df %>%
     v_tipo1 = sum(is.na(Type_1)),
     v_hp    = sum(is.na(HP)),
     v_atk   = sum(is.na(Attack)),
-    v_def   = sum(is.na(Defense)),
+    v_def   = sum(is.na(Defense)),  #aqui lo que hice fue que contara si hay datos faltantes en esas columnas
     v_sp_atk = sum(is.na(`Sp.Atk`)),
     v_sp_def = sum(is.na(`Sp.Def`)),
     v_speed = sum(is.na(Speed)),
   ) %>%
-  kable(caption = "Resumen de datos faltantes por columna")
+  kable(caption = "Resumen de datos faltantes por columna") #aqui que me hiciera una tabla mas bonita de la que me mostraba ante.
 
 
 
   
 ```
 
-Descripción\
+Tras realizar el proceso de limpieza de la fuente, se confirmó que no hay datos daltantes del conjunto de datos. Se verificó mediante funciones de R la ausencia de valores faltantes en las variables críticas de estudio (HP, Attack, Defense, Sp. Atk, Sp. Def y Speed), lo cual garantiza la consistencia de los cálculos estadísticos y evita sesgos por pérdida de información.
 
 \subsection{Item 2}
 
-Descripción\
+En esta fase, se aplicarán medidas de tendencia central sobre las seis variables dependientes del estudio. Específicamente, se calculará la media aritmética ($\mu$) para cada una de las estadísticas base (HP, Ataque, Defensa, Velocidad, Ataque Especial y Defensa Especial) segmentadas por tipo elemental.Este procedimiento permitirá establecer el perfil estadístico promedio de las tipologias. Asimismo, la media servirá como el punto de referencia base para identificar desviaciones y comparar el grado de especialización ofensiva o defensiva de cada tipo de pokemon.
+
+```{r}
+df %>% #de mi datafrem seleccione la columna tipo 1.
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% # mi plan era seleccionar la mita, pero
+  group_by(Type_1) %>%                                                            # como si que si entraban todos ps 
+  summarise(                                                                        # ps escribi todos jejeje.
+    Media_HP = round(mean(HP),2),
+    Media_Ataque = round(mean(Attack),2),
+    Media_Defense = round(mean(Defense),2), # aqui realmente si no cabian todos asi que si tuve que separar
+  ) %>% 
+  kable(caption = "Promedios de HP, Attack, Defense  todos los tipos") 
+```
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>%
+  group_by(Type_1) %>% 
+  summarise(
+    Media_Sp.Atk = round(mean(Sp.Atk),2),
+    Media_Sp.Def = round(mean(Sp.Def),2), # copie y pegue todo pero cambie la media que necesitaba
+    Media_Speed = round(mean(Speed),2),
+  ) %>% 
+  kable(caption = "Promedios de Sp.Atk, Sp.Def, Speed todos los tipos") 
+```
 
 \subsubsection{Item 2.2}
 
