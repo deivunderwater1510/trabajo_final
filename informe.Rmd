@@ -390,8 +390,83 @@ df %>%
   kable(caption = "Coeficiente de variacion de Sp.Atk, Sp.Def, Velocidad de todos los tipos")  
     
 ```
+\subsection{Coeficiente de Correlación de Pearson}
+Para finalizar el análisis cuantitativo, se aplicará el Coeficiente de Correlación de Pearson. Esta prueba estadística mide el grado de relación lineal entre dos variables aleatorias cuantitativas. El coeficiente oscila entre -1 y +1, donde 1 indica una correlación positiva perfecta, -1 una correlación negativa perfecta y 0 la ausencia de relación lineal.
+
+El uso de Pearson en este estudio no será aleatorio, sino que se fundamentará en los resultados de la Tabla de Coeficientes de Variación previamente generada:
+
+\begin{itemize}
+
+\item{Validación de Dependencias: Se seleccionarán las variables que presentaron los menores Coeficientes de Variación por tipo elemental para determinar si su consistencia individual se traduce en una relación de dependencia mutua.}
+
+\end{itemize}
+
+La integración de la tabla de coeficiente de variacion con el análisis de Pearson permite transitar de un análisis descriptivo simple a uno relacional, proporcionando una base sólida para concluir sobre la estabilidad estructural de los equipos basada en la predictibilidad de sus estadísticas.
+
+```{r}
+df %>%
+   filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>%
+  group_by(Type_1) %>%
+  summarise(
+    Variables = first(case_when(
+      Type_1 == "Bug"  ~ "HP y Defense",
+      Type_1 == "Dark" ~ "Attack y Speed",
+      Type_1 == "Dragon" ~ "Attack y Speed",
+      Type_1 == "Electric"  ~ "HP y Defense",
+      Type_1 == "Fairy"  ~ "Sp.Def y Defense",
+      Type_1 == "Fighting"  ~ "Attack y Defense",
+      Type_1 == "Fire"  ~ "HP y Attack",
+      Type_1 == "Flying"  ~ "HP y Attack",
+      Type_1 == "Ghost"  ~ "Attack y Sp.Def",
+      Type_1 == "Grass"  ~ "HP y Defense",
+      Type_1 == "Ground"  ~ "Attack y Sp.Def",
+      Type_1 == "Ice"  ~ "HP y Sp.Atk",
+      Type_1 == "Normal"  ~ "Sp.Def y Defense",
+      Type_1 == "Poison"  ~ "HP y Attack",
+      Type_1 == "Psychic"  ~ "Sp.Def y Sp.Atk",
+      Type_1 == "Rock"  ~ "HP y Attack",
+      Type_1 == "Steel"  ~ "Attack y Defense",
+      Type_1 == "Water"  ~ "Attack y Defense",
+    )),
+    Coeficiente =first(case_when(
+      Type_1 == "Bug"  ~ round(cor(HP, Defense, method = "pearson"),2),
+      Type_1 == "Dark" ~ round(cor(Attack, Speed, method = "pearson"),2),
+      Type_1 == "Dragon" ~ round(cor(Attack, Speed, method = "pearson"),2),
+      Type_1 == "Electric" ~ round(cor(HP, Defense, method = "pearson"),2),
+      Type_1 == "Fairy" ~ round(cor(Sp.Def, Defense, method = "pearson"),2),
+      Type_1 == "Fighting" ~ round(cor(Attack, Defense, method = "pearson"),2),
+      Type_1 == "Fire" ~ round(cor(HP, Attack, method = "pearson"),2),
+      Type_1 == "Flying" ~ round(cor(HP, Speed, method = "pearson"),2),
+      Type_1 == "Ghost" ~ round(cor(Attack, Sp.Def, method = "pearson"),2),
+      Type_1 == "Grass"  ~ round(cor(HP, Defense, method = "pearson"),2),
+      Type_1 == "Ground" ~ round(cor(Attack, Sp.Def, method = "pearson"),2),
+      Type_1 == "Ice"  ~ round(cor(HP, Sp.Atk, method = "pearson"),2),
+      Type_1 == "Normal" ~ round(cor(Sp.Def, Defense, method = "pearson"),2),
+      Type_1 == "Poison" ~ round(cor(HP, Attack, method = "pearson"),2),
+      Type_1 == "Psychic" ~ round(cor(Sp.Def, Sp.Atk, method = "pearson"),2),
+      Type_1 == "Rock" ~ round(cor(HP, Attack, method = "pearson"),2),
+      Type_1 == "Steel" ~ round(cor(Attack, Defense, method = "pearson"),2),
+      Type_1 == "Water" ~ round(cor(Attack, Defense, method = "pearson"),2),
+    ))
+   )%>%
+  kable(caption = "Correlación de Pearson")
+```
 
 \
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Análisis de Resultados}
 

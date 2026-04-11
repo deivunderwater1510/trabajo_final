@@ -707,6 +707,63 @@ Steel & 46.18 & 36.88 & 43.04 \\
 Water & 37.26 & 39.80 & 36.90 \\
 \end{longtable}
 
+\subsection{Coeficiente de Correlación de Pearson}
+
+Para finalizar el análisis cuantitativo, se aplicará el Coeficiente de
+Correlación de Pearson. Esta prueba estadística mide el grado de
+relación lineal entre dos variables aleatorias cuantitativas. El
+coeficiente oscila entre -1 y +1, donde 1 indica una correlación
+positiva perfecta, -1 una correlación negativa perfecta y 0 la ausencia
+de relación lineal.
+
+El uso de Pearson en este estudio no será aleatorio, sino que se
+fundamentará en los resultados de la Tabla de Coeficientes de Variación
+previamente generada:
+
+\begin{itemize}
+
+\item{Validación de Dependencias: Se seleccionarán las variables que presentaron los menores Coeficientes de Variación por tipo elemental para determinar si su consistencia individual se traduce en una relación de dependencia mutua.}
+
+\end{itemize}
+
+La integración de la tabla de coeficiente de variacion con el análisis
+de Pearson permite transitar de un análisis descriptivo simple a uno
+relacional, proporcionando una base sólida para concluir sobre la
+estabilidad estructural de los equipos basada en la predictibilidad de
+sus estadísticas.
+
+\begin{longtable}[]{@{}llr@{}}
+\caption{Correlación de Pearson}\tabularnewline
+\toprule\noalign{}
+Type\_1 & Variables & Coeficiente \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & Variables & Coeficiente \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & HP y Defense & 0.29 \\
+Dark & Attack y Speed & 0.39 \\
+Dragon & Attack y Speed & 0.50 \\
+Electric & HP y Defense & 0.68 \\
+Fairy & Sp.Def y Defense & 0.43 \\
+Fighting & Attack y Defense & 0.67 \\
+Fire & HP y Attack & 0.67 \\
+Flying & HP y Attack & 0.60 \\
+Ghost & Attack y Sp.Def & 0.38 \\
+Grass & HP y Defense & 0.56 \\
+Ground & Attack y Sp.Def & 0.09 \\
+Ice & HP y Sp.Atk & -0.09 \\
+Normal & Sp.Def y Defense & 0.58 \\
+Poison & HP y Attack & 0.58 \\
+Psychic & Sp.Def y Sp.Atk & 0.35 \\
+Rock & HP y Attack & 0.48 \\
+Steel & Attack y Defense & 0.30 \\
+Water & Attack y Defense & 0.52 \\
+\end{longtable}
+
 \hfill\break
 
 \chapter{Análisis de Resultados}
