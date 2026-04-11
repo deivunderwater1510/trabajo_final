@@ -243,7 +243,7 @@ df %>%
 
 Tras realizar el proceso de limpieza de la fuente, se confirmó que no hay datos daltantes del conjunto de datos. Se verificó mediante funciones de R la ausencia de valores faltantes en las variables críticas de estudio (HP, Attack, Defense, Sp. Atk, Sp. Def y Speed), lo cual garantiza la consistencia de los cálculos estadísticos y evita sesgos por pérdida de información.
 
-\subsection{Item 2}
+\subsection{Medias Aritméticas}
 
 En esta fase, se aplicarán medidas de tendencia central sobre las seis variables dependientes del estudio. Específicamente, se calculará la media aritmética ($\mu$) para cada una de las estadísticas base (HP, Ataque, Defensa, Velocidad, Ataque Especial y Defensa Especial) segmentadas por tipo elemental.Este procedimiento permitirá establecer el perfil estadístico promedio de las tipologias. Asimismo, la media servirá como el punto de referencia base para identificar desviaciones y comparar el grado de especialización ofensiva o defensiva de cada tipo de pokemon.
 
@@ -254,9 +254,9 @@ df %>% #de mi datafrem seleccione la columna tipo 1.
   summarise(                                                                        # ps escribi todos jejeje.
     Media_HP = round(mean(HP),2),
     Media_Ataque = round(mean(Attack),2),
-    Media_Defense = round(mean(Defense),2), # aqui realmente si no cabian todos asi que si tuve que separar
+    Media_Defensa = round(mean(Defense),2), # aqui realmente si no cabian todos asi que si tuve que separar
   ) %>% 
-  kable(caption = "Promedios de HP, Attack, Defense  todos los tipos") 
+  kable(caption = "Promedios de HP, Attack, Defense de todos los tipos") 
 ```
 
 ```{r}
@@ -265,19 +265,133 @@ df %>%
   group_by(Type_1) %>% 
   summarise(
     Media_Sp.Atk = round(mean(Sp.Atk),2),
-    Media_Sp.Def = round(mean(Sp.Def),2), # copie y pegue todo pero cambie la media que necesitaba
-    Media_Speed = round(mean(Speed),2),
+    Media_Sp.Def = round(mean(Sp.Def),2),
+    Media_Velocidad = round(mean(Speed),2),
   ) %>% 
-  kable(caption = "Promedios de Sp.Atk, Sp.Def, Speed todos los tipos") 
+  kable(caption = "Promedios de Sp.Atk, Sp.Def, Speed de todos los tipos") 
 ```
 
-\subsubsection{Item 2.2}
+\subsubsection{Dispersión y Variabilidad}
+De manera complementaria al cálculo de las medias, se aplicarán medidas de dispersión para cuantificar la variabilidad intrínseca de cada tipo elemental. Se utilizará la varianza ($\sigma^2$) y la desviación estándar ($\sigma$) con el objetivo de determinar qué tan consistentes son los perfiles estadísticos dentro de una misma categoría.
 
-Descripción\
+Este análisis es crucial para la estabilidad del estudio por dos razones fundamentales:
 
-\subsection{Item n}
+\begin{itemize}
 
-Descripción\
+ \item{Identificación de Especialistas: Una varianza reducida en una estadística específica, indicaría que el tipo es altamente especializado y consistente en ese rol.}
+ 
+\item{Detección de Heterogeneidad: Una varianza elevada sugeriría que el tipo es "generalista" o que posee subgrupos con perfiles muy distintos, lo que requeriría un análisis más profundo de sus valores atípicos.} 
+
+\end{itemize} 
+
+Finalmente, estas métricas permitirán validar si las diferencias observadas en las medias son representativas del grupo o si están influenciadas por una dispersión excesiva de los datos, asegurando así la robustez del modelo descriptivo propuesto.
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% 
+  group_by(Type_1) %>%
+   summarise(
+     Var_HP = round(var(HP), 2),
+      Var_Ataque = round(var(Attack), 2), #cambie la palabra "mean" por "var" y ya... :)
+       Var_Defensa = round(var(Defense), 2),
+   ) %>% 
+  kable(caption = "Varianza de HP, Attack, Defense de todos los tipos") 
+```
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% 
+  group_by(Type_1) %>%
+   summarise(
+     Var_Sp.Atk = round(var(Sp.Atk), 2),
+      Var_Sp.Def = round(var(Sp.Def), 2), #ahora copie y pegue para sacar la estadisticas faltantes. 
+       Var_Velocidad = round(var(Speed), 2),
+   ) %>% 
+  kable(caption = "Varianza de Sp.Atk, Sp.Def, Speed de todos los tipos")
+```
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% 
+  group_by(Type_1) %>%
+   summarise(
+     Dis_HP = round(sd(HP), 2),
+      Dis_Ataque = round(sd(Attack), 2), #cambie la palabra "var" por "sd" y ya... :)
+       Dis_Defensa = round(sd(Defense), 2),
+   ) %>% 
+  kable(caption = "Dispersion estandar de HP, Attack, Defense de todos los tipos")
+```
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% 
+  group_by(Type_1) %>%
+   summarise(
+     Dis_Sp.Atk = round(sd(Sp.Atk), 2),
+      Dis_Sp.Def = round(sd(Sp.Def), 2),
+       Dis_Velocidad = round(sd(Speed), 2),
+   ) %>% 
+  kable(caption = "Dispersion estandar de Sp.Atk, Sp.Def, Speed de todos los tipos")
+```
+\
+
+\subsection{Coeficiente de Variación}
+Como medida de dispersión relativa, se calculará el Coeficiente de Variación, definido como la relación entre la desviación estándar y la media aritmética ($CV = \frac{\sigma}{\mu}$). Esta métrica es fundamental para el estudio, ya que permite realizar comparaciones de variabilidad entre variables que poseen distintas escalas o promedios.
+
+La implementación del coeficiente de variacion tiene dos objetivos principales en este marco metodológico:
+
+\begin{itemize}
+
+ \item{Normalización de la Dispersión: Permitirá determinar, de manera porcentual, qué estadística base es más inestable dentro de un tipo específico, independientemente de si sus valores promedio son altos o bajos.}
+ 
+\item{Evaluación de la Homogeneidad: Un coeficiente de variacion menor al 15-20\% indicará que el tipo elemental es altamente homogéneo en esa estadística, validando la existencia de un patrón consistente. Por el contrario, un coeficiente de variacion elevado señalará una categoría con una diversidad de especímenes que rompen el perfil promedio del grupo.}
+
+\end{itemize}
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% 
+  group_by(Type_1) %>%
+  summarise(
+    Media_HP = round(mean(HP),2),
+    Media_Ataque = round(mean(Attack),2),  # lo que hice fue pegar las formulas que ya tenia 
+    Media_Defensa = round(mean(Defense),2),
+    Dis_HP = round(sd(HP), 2),
+    Dis_Ataque = round(sd(Attack), 2),
+    Dis_Defensa = round(sd(Defense), 2),
+  ) %>%
+  mutate(
+    cv_HP = round((Dis_HP / Media_HP) * 100, 2),
+    cv_Ataque = round((Dis_Ataque / Media_Ataque) * 100, 2),  #y aqui hice que con las operaciones que ya hicimos ps 
+    cv_Defensa = round((Dis_Defensa / Media_Defensa) * 100, 2),    #haga la formula del coeficiente de variacion
+  ) %>% 
+  select(Type_1, cv_HP, cv_Ataque, cv_Defensa ) %>%   #aqui que solo seleccionara la columnas de los coeficientes y asi 
+  kable(caption = "Coeficiente de variacion de HP, Ataque, Defensa de todos los tipos")  #nos olvidamos de la media y eso
+```
+
+```{r}
+df %>%
+  filter(Type_1 %in% c("Steel", "Water", "Bug", "Dragon", "Electric", "Ghost", "Fire", "Fairy", "Ice", "Fighting", "Normal", "Grass", "Psychic", "Rock", "Dark", "Ground", "Poison", "Flying")) %>% 
+  group_by(Type_1) %>%
+  summarise(
+    Media_Sp.Atk = round(mean(Sp.Atk),2),
+    Media_Sp.Def = round(mean(Sp.Def),2),
+    Media_Velocidad = round(mean(Speed),2),
+    Dis_Sp.Atk = round(sd(Sp.Atk), 2),
+    Dis_Sp.Def = round(sd(Sp.Def), 2),
+    Dis_Velocidad = round(sd(Speed), 2),
+  ) %>%
+  mutate(
+  cv_Sp.Atk = round((Dis_Sp.Atk / Media_Sp.Atk) * 100, 2),
+  cv_Sp.Def = round((Dis_Sp.Def / Media_Sp.Def) * 100, 2),  
+  cv_Velocidad = round((Dis_Velocidad / Media_Velocidad) * 100, 2),   
+  ) %>% 
+  select(Type_1, cv_Sp.Atk, cv_Sp.Def, cv_Velocidad ) %>%  
+  kable(caption = "Coeficiente de variacion de Sp.Atk, Sp.Def, Velocidad de todos los tipos")  
+    
+```
+
+\
 
 \chapter{Análisis de Resultados}
 

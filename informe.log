@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.19)  10 APR 2026 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.19)  11 APR 2026 04:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,91 +914,107 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--362
 LaTeX Info: Redefining \. on input line 465.
 LaTeX Info: Redefining \% on input line 465.
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 469--470
-
+Overfull \hbox (28.65514pt too wide) in paragraph at lines 482--483
+[]\OT1/cmr/m/n/10.95 Detecci^^Son de He-te-ro-ge-nei-dad: Una va-rian-za ele-va
+-da su-ge-rir^^S^^Pa que el ti-po es "generalista.[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
-
- []
-
-LaTeX Info: Redefining \. on input line 475.
-LaTeX Info: Redefining \% on input line 475.
+LaTeX Info: Redefining \. on input line 522.
+LaTeX Info: Redefining \% on input line 522.
 [10]
+LaTeX Info: Redefining \. on input line 555.
+LaTeX Info: Redefining \% on input line 555.
+[11]
+LaTeX Info: Redefining \. on input line 621.
+LaTeX Info: Redefining \% on input line 621.
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
+
+ []
+
+LaTeX Info: Redefining \. on input line 675.
+LaTeX Info: Redefining \% on input line 675.
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
+
+ []
+
+LaTeX Info: Redefining \. on input line 712.
+LaTeX Info: Redefining \% on input line 712.
+[14]
 Cap\'{\i }tulo 4.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-77.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
+14.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 477.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 714.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 480.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 717.
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 488--489
+Underfull \hbox (badness 10000) in paragraph at lines 721--722
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+Underfull \hbox (badness 10000) in paragraph at lines 725--726
 
  []
 
-[11
+
+Underfull \hbox (badness 10000) in paragraph at lines 729--730
+
+ []
+
+[15
 
 ]
 Cap\'{\i }tulo 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--501
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--505
+Underfull \hbox (badness 10000) in paragraph at lines 741--742
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
+Underfull \hbox (badness 10000) in paragraph at lines 743--744
 
  []
 
-[12
+[16
 
 ]
 Ap\'{e}ndice A.
-[13
+[17
 
 ]
 Ap\'{e}ndice B.
-[14
+[18
 
 ]
 Ap\'{e}ndice C.
 No file informe.bbl.
-[15
+[19
 
 ] (./informe.aux
 LaTeX Info: Redefining \. on input line 9.
@@ -1015,30 +1031,31 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: B88C4F3CC56DBC43A68C504F071EB262;4540.
+(rerunfilecheck)             Checksum: D8DD550BD30EE0F0EABC2907E35E52A1;4790.
  ) 
 Here is how much of TeX's memory you used:
- 20593 strings out of 474222
- 339847 string characters out of 5748733
- 1954975 words of memory out of 5000000
- 42446 multiletter control sequences out of 15000+600000
+ 20615 strings out of 474222
+ 340039 string characters out of 5748733
+ 1955975 words of memory out of 5000000
+ 42458 multiletter control sequences out of 15000+600000
  569719 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 105i,12n,107p,433b,600s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 105i,12n,107p,433b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.
-pfb>
-Output written on informe.pdf (18 pages, 412406 bytes).
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on informe.pdf (22 pages, 438924 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
+ 320 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
  211 words of extra memory for PDF output out of 10000 (max. 10000000)
 

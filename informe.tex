@@ -386,7 +386,7 @@ críticas de estudio (HP, Attack, Defense, Sp. Atk, Sp. Def y Speed), lo
 cual garantiza la consistencia de los cálculos estadísticos y evita
 sesgos por pérdida de información.
 
-\subsection{Item 2}
+\subsection{Medias Aritméticas}
 
 En esta fase, se aplicarán medidas de tendencia central sobre las seis
 variables dependientes del estudio. Específicamente, se calculará la
@@ -399,14 +399,14 @@ comparar el grado de especialización ofensiva o defensiva de cada tipo
 de pokemon.
 
 \begin{longtable}[]{@{}lrrr@{}}
-\caption{Promedios de HP, Attack, Defense todos los
+\caption{Promedios de HP, Attack, Defense de todos los
 tipos}\tabularnewline
 \toprule\noalign{}
-Type\_1 & Media\_HP & Media\_Ataque & Media\_Defense \\
+Type\_1 & Media\_HP & Media\_Ataque & Media\_Defensa \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Type\_1 & Media\_HP & Media\_Ataque & Media\_Defense \\
+Type\_1 & Media\_HP & Media\_Ataque & Media\_Defensa \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -432,14 +432,14 @@ Water & 70.87 & 72.34 & 70.28 \\
 \end{longtable}
 
 \begin{longtable}[]{@{}lrrr@{}}
-\caption{Promedios de Sp.Atk, Sp.Def, Speed todos los
+\caption{Promedios de Sp.Atk, Sp.Def, Speed de todos los
 tipos}\tabularnewline
 \toprule\noalign{}
-Type\_1 & Media\_Sp.Atk & Media\_Sp.Def & Media\_Speed \\
+Type\_1 & Media\_Sp.Atk & Media\_Sp.Def & Media\_Velocidad \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Type\_1 & Media\_Sp.Atk & Media\_Sp.Def & Media\_Speed \\
+Type\_1 & Media\_Sp.Atk & Media\_Sp.Def & Media\_Velocidad \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
@@ -464,13 +464,250 @@ Steel & 71.78 & 75.33 & 57.22 \\
 Water & 70.82 & 68.29 & 66.26 \\
 \end{longtable}
 
-\subsubsection{Item 2.2}
+\subsubsection{Dispersión y Variabilidad}
 
-Descripción\\
+De manera complementaria al cálculo de las medias, se aplicarán medidas
+de dispersión para cuantificar la variabilidad intrínseca de cada tipo
+elemental. Se utilizará la varianza (\(\sigma^2\)) y la desviación
+estándar (\(\sigma\)) con el objetivo de determinar qué tan consistentes
+son los perfiles estadísticos dentro de una misma categoría.
 
-\subsection{Item n}
+Este análisis es crucial para la estabilidad del estudio por dos razones
+fundamentales:
 
-Descripción\\
+\begin{itemize}
+
+ \item{Identificación de Especialistas: Una varianza reducida en una estadística específica, indicaría que el tipo es altamente especializado y consistente en ese rol.}
+ 
+\item{Detección de Heterogeneidad: Una varianza elevada sugeriría que el tipo es "generalista" o que posee subgrupos con perfiles muy distintos, lo que requeriría un análisis más profundo de sus valores atípicos.} 
+
+\end{itemize}
+
+Finalmente, estas métricas permitirán validar si las diferencias
+observadas en las medias son representativas del grupo o si están
+influenciadas por una dispersión excesiva de los datos, asegurando así
+la robustez del modelo descriptivo propuesto.
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Varianza de HP, Attack, Defense de todos los
+tipos}\tabularnewline
+\toprule\noalign{}
+Type\_1 & Var\_HP & Var\_Ataque & Var\_Defensa \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & Var\_HP & Var\_Ataque & Var\_Defensa \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & 316.94 & 1107.49 & 1047.56 \\
+Dark & 1106.71 & 707.68 & 680.24 \\
+Dragon & 938.75 & 894.64 & 552.34 \\
+Electric & 411.07 & 674.41 & 468.61 \\
+Fairy & 521.24 & 920.15 & 484.46 \\
+Fighting & 771.51 & 745.34 & 463.82 \\
+Fire & 380.36 & 654.55 & 580.73 \\
+Flying & 395.25 & 863.86 & 540.25 \\
+Ghost & 753.69 & 670.42 & 933.43 \\
+Grass & 391.14 & 843.70 & 583.78 \\
+Ground & 697.64 & 862.66 & 1079.43 \\
+Ice & 792.41 & 871.92 & 1154.43 \\
+Normal & 1211.62 & 814.32 & 493.18 \\
+Poison & 553.42 & 396.25 & 774.39 \\
+Psychic & 953.19 & 1039.15 & 721.30 \\
+Rock & 501.31 & 1056.67 & 1473.85 \\
+Steel & 478.17 & 625.94 & 1078.31 \\
+Water & 770.03 & 638.05 & 670.67 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Varianza de Sp.Atk, Sp.Def, Speed de todos los
+tipos}\tabularnewline
+\toprule\noalign{}
+Type\_1 & Var\_Sp.Atk & Var\_Sp.Def & Var\_Velocidad \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & Var\_Sp.Atk & Var\_Sp.Def & Var\_Velocidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & 900.00 & 967.29 & 1067.71 \\
+Dark & 864.25 & 601.37 & 650.47 \\
+Dragon & 1131.26 & 841.55 & 606.32 \\
+Electric & 887.28 & 413.53 & 1173.72 \\
+Fairy & 930.02 & 744.24 & 1040.79 \\
+Fighting & 433.58 & 497.38 & 883.72 \\
+Fire & 743.46 & 468.68 & 604.68 \\
+Flying & 886.78 & 455.94 & 523.75 \\
+Ghost & 1069.63 & 857.50 & 1056.29 \\
+Grass & 605.31 & 480.39 & 690.21 \\
+Ground & 372.10 & 520.80 & 728.91 \\
+Ice & 818.03 & 1268.03 & 712.31 \\
+Normal & 596.78 & 574.58 & 690.48 \\
+Poison & 722.26 & 605.87 & 780.10 \\
+Psychic & 1049.47 & 811.95 & 968.99 \\
+Rock & 710.85 & 953.34 & 757.50 \\
+Steel & 1098.75 & 771.94 & 606.86 \\
+Water & 696.40 & 738.84 & 597.79 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Dispersion estandar de HP, Attack, Defense de todos los
+tipos}\tabularnewline
+\toprule\noalign{}
+Type\_1 & Dis\_HP & Dis\_Ataque & Dis\_Defensa \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & Dis\_HP & Dis\_Ataque & Dis\_Defensa \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & 17.80 & 33.28 & 32.37 \\
+Dark & 33.27 & 26.60 & 26.08 \\
+Dragon & 30.64 & 29.91 & 23.50 \\
+Electric & 20.27 & 25.97 & 21.65 \\
+Fairy & 22.83 & 30.33 & 22.01 \\
+Fighting & 27.78 & 27.30 & 21.54 \\
+Fire & 19.50 & 25.58 & 24.10 \\
+Flying & 19.88 & 29.39 & 23.24 \\
+Ghost & 27.45 & 25.89 & 30.55 \\
+Grass & 19.78 & 29.05 & 24.16 \\
+Ground & 26.41 & 29.37 & 32.85 \\
+Ice & 28.15 & 29.53 & 33.98 \\
+Normal & 34.81 & 28.54 & 22.21 \\
+Poison & 23.52 & 19.91 & 27.83 \\
+Psychic & 30.87 & 32.24 & 26.86 \\
+Rock & 22.39 & 32.51 & 38.39 \\
+Steel & 21.87 & 25.02 & 32.84 \\
+Water & 27.75 & 25.26 & 25.90 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Dispersion estandar de Sp.Atk, Sp.Def, Speed de todos los
+tipos}\tabularnewline
+\toprule\noalign{}
+Type\_1 & Dis\_Sp.Atk & Dis\_Sp.Def & Dis\_Velocidad \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & Dis\_Sp.Atk & Dis\_Sp.Def & Dis\_Velocidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & 30.00 & 31.10 & 32.68 \\
+Dark & 29.40 & 24.52 & 25.50 \\
+Dragon & 33.63 & 29.01 & 24.62 \\
+Electric & 29.79 & 20.34 & 34.26 \\
+Fairy & 30.50 & 27.28 & 32.26 \\
+Fighting & 20.82 & 22.30 & 29.73 \\
+Fire & 27.27 & 21.65 & 24.59 \\
+Flying & 29.78 & 21.35 & 22.89 \\
+Ghost & 32.71 & 29.28 & 32.50 \\
+Grass & 24.60 & 21.92 & 26.27 \\
+Ground & 19.29 & 22.82 & 27.00 \\
+Ice & 28.60 & 35.61 & 26.69 \\
+Normal & 24.43 & 23.97 & 26.28 \\
+Poison & 26.87 & 24.61 & 27.93 \\
+Psychic & 32.40 & 28.49 & 31.13 \\
+Rock & 26.66 & 30.88 & 27.52 \\
+Steel & 33.15 & 27.78 & 24.63 \\
+Water & 26.39 & 27.18 & 24.45 \\
+\end{longtable}
+
+\hfill\break
+
+\subsection{Coeficiente de Variación}
+
+Como medida de dispersión relativa, se calculará el Coeficiente de
+Variación, definido como la relación entre la desviación estándar y la
+media aritmética (\(CV = \frac{\sigma}{\mu}\)). Esta métrica es
+fundamental para el estudio, ya que permite realizar comparaciones de
+variabilidad entre variables que poseen distintas escalas o promedios.
+
+La implementación del coeficiente de variacion tiene dos objetivos
+principales en este marco metodológico:
+
+\begin{itemize}
+
+ \item{Normalización de la Dispersión: Permitirá determinar, de manera porcentual, qué estadística base es más inestable dentro de un tipo específico, independientemente de si sus valores promedio son altos o bajos.}
+ 
+\item{Evaluación de la Homogeneidad: Un coeficiente de variacion menor al 15-20\% indicará que el tipo elemental es altamente homogéneo en esa estadística, validando la existencia de un patrón consistente. Por el contrario, un coeficiente de variacion elevado señalará una categoría con una diversidad de especímenes que rompen el perfil promedio del grupo.}
+
+\end{itemize}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Coeficiente de variacion de HP, Ataque, Defensa de todos los
+tipos}\tabularnewline
+\toprule\noalign{}
+Type\_1 & cv\_HP & cv\_Ataque & cv\_Defensa \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & cv\_HP & cv\_Ataque & cv\_Defensa \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & 31.51 & 49.27 & 46.52 \\
+Dark & 43.89 & 30.23 & 36.41 \\
+Dragon & 38.50 & 30.22 & 31.24 \\
+Electric & 31.29 & 35.59 & 34.86 \\
+Fairy & 31.98 & 45.38 & 31.01 \\
+Fighting & 36.51 & 26.58 & 29.77 \\
+Fire & 27.92 & 30.96 & 36.06 \\
+Flying & 28.40 & 36.79 & 35.21 \\
+Ghost & 44.42 & 37.74 & 40.47 \\
+Grass & 30.07 & 39.07 & 34.08 \\
+Ground & 35.46 & 31.45 & 38.24 \\
+Ice & 37.18 & 39.68 & 46.04 \\
+Normal & 44.90 & 38.37 & 37.10 \\
+Poison & 33.33 & 26.35 & 38.21 \\
+Psychic & 43.01 & 51.17 & 40.08 \\
+Rock & 32.78 & 37.60 & 39.13 \\
+Steel & 30.51 & 28.43 & 29.56 \\
+Water & 39.16 & 34.92 & 36.85 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\caption{Coeficiente de variacion de Sp.Atk, Sp.Def, Velocidad de todos
+los tipos}\tabularnewline
+\toprule\noalign{}
+Type\_1 & cv\_Sp.Atk & cv\_Sp.Def & cv\_Velocidad \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Type\_1 & cv\_Sp.Atk & cv\_Sp.Def & cv\_Velocidad \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Bug & 53.16 & 49.12 & 53.34 \\
+Dark & 40.31 & 34.65 & 33.72 \\
+Dragon & 42.85 & 37.34 & 30.70 \\
+Electric & 35.12 & 30.56 & 40.27 \\
+Fairy & 40.08 & 31.80 & 49.63 \\
+Fighting & 39.16 & 33.15 & 42.49 \\
+Fire & 32.75 & 31.13 & 33.18 \\
+Flying & 43.51 & 31.04 & 27.58 \\
+Ghost & 38.89 & 36.22 & 53.86 \\
+Grass & 33.58 & 31.63 & 44.12 \\
+Ground & 36.71 & 34.76 & 43.13 \\
+Ice & 37.73 & 47.46 & 43.32 \\
+Normal & 42.91 & 37.95 & 38.66 \\
+Poison & 39.93 & 35.30 & 39.68 \\
+Psychic & 35.72 & 34.69 & 43.19 \\
+Rock & 44.05 & 42.23 & 50.37 \\
+Steel & 46.18 & 36.88 & 43.04 \\
+Water & 37.26 & 39.80 & 36.90 \\
+\end{longtable}
+
+\hfill\break
 
 \chapter{Análisis de Resultados}
 
