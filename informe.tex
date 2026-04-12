@@ -751,9 +751,9 @@ Electric & HP y Defense & 0.68 \\
 Fairy & Sp.Def y Defense & 0.43 \\
 Fighting & Attack y Defense & 0.67 \\
 Fire & HP y Attack & 0.67 \\
-Flying & HP y Attack & 0.60 \\
+Flying & HP y Speed & 0.60 \\
 Ghost & Attack y Sp.Def & 0.38 \\
-Grass & HP y Defense & 0.56 \\
+Grass & HP y Defense & 0.54 \\
 Ground & Attack y Sp.Def & 0.09 \\
 Ice & HP y Sp.Atk & -0.09 \\
 Normal & Sp.Def y Defense & 0.58 \\
@@ -773,17 +773,98 @@ metodologías descritas en el capítulo anterior, así como del análisis
 estadístico descriptivo de las variables estudiadas y las ventajas y
 desventajas al aplicar dichos tests.\}
 
-\section{Presentación de resultados 1}
+\section{Grafico de puntos de vida}
 
-Descripción\\
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-12-1} \end{center}
 
-\section{Presentación de resultados 2}
+A simple vista, la mayoría de los tipos comparten una estructura
+similar, con medianas que oscilan de manera consistente entre los 60 y
+80 puntos. Tipos como dragon, ground y fighting presentan las medianas
+más altas, mientras que ghost y bug muestran las medidas centrales más
+bajas. Tipos como water, normal y psychic presentan cajas y bigotes muy
+alargados. Esto indica una alta variación en los puntos de vida, por lo
+contrario, tipos como flying, ghost y fairy tienen cajas mucho más
+comprimidas los Pokémon de estos tipos tienden a tener valores de HP muy
+similares entre sí. Finalmente podemos observar que destacan anomalías
+extremas hacia arriba en el tipo Normal y en el tipo Water. También se
+observa un caso atípico extremo hacia abajo en el tipo Bug.\\
 
-Descripción\\
+\section{Grafico de puntos de ataque}
 
-\section{Presentación de resultados n}
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-13-1} \end{center}
 
-Descripción\\
+A diferencia de la variable de puntos de vida, la distribución del
+ataque entre los diferentes tipos elementales exhibe una mayor
+homogeneidad interna, reflejada en una reducción significativa de
+valores atípicos. Esta escasez de puntos extremos sugiere que el
+potencial ofensivo físico es una estadistica más estandarizada en el
+diseño de los pokemon, donde los tipos especializados como fighting y
+dragon no solo presentan las medianas más elevadas, sino también una
+dispersión controlada que refuerza su rol competitivo.\\
+
+\section{Grafico de puntos de defesa}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-14-1} \end{center}
+
+La Defensa presenta una distribución con una marcada asimetría positiva
+y una especialización sectorial evidente. Los tipos steel, rock y ground
+consolidan un bloque de alta resistencia con medianas significativamente
+superiores al resto de las categorías, desplazando su rango
+intercuartílico hacia la parte superior del eje. Un hallazgo estadístico
+relevante es la presencia de valores atípicos extremos en tipos
+tradicionalmente frágiles, como el tipo bug, donde una observación
+supera los 230 puntos de defensa. Este tipo de anomalías incrementará
+drásticamente la desviación estándar y el coeficiente de variación de
+dicho grupo. La Defensa funciona como una variable donde la consistencia
+estadística es baja debido a la gran disparidad entre los Pokémon
+defensivos especializados y el resto de los integrantes de cada tipo.\\
+
+\section{Grafico de puntos de Sp.atk}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-15-1} \end{center}
+
+La distribución del ataque especial refleja una especialización de los
+datos, donde los tipos de naturaleza elemental como psíquico, eléctrico
+y fantasma desplazan a los tipos físicos en las métricas de tendencia
+central. A diferencia de la defensa, esta variable no presenta valores
+atípicos tan extremos, lo que indica un `techo' de poder más
+estandarizado y equilibrado entre las especies de élite. Sin embargo,
+destaca una notable asimetría positiva en casi todos los grupos; los
+bigotes superiores extendidos sugieren que, incluso en tipos con
+medianas bajas como acero o bicho, existen individuos con una capacidad
+especial sobresaliente.
+
+\section{Grafico de puntos de Sp.Def}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-16-1} \end{center}
+
+El análisis de la defensa especial revela una distribución más
+equitativa y elevada entre las categorías elementales en comparación con
+su contraparte física, con medianas que se estabilizan en rangos
+superiores para tipos de naturaleza mística como fairy, psíquico y
+dragón. A pesar de esta tendencia hacia la homogeneidad en los valores
+centrales, la variable exhibe una volatilidad crítica debido a la
+reaparición de valores atípicos extremos, particularmente en el tipo
+bug, donde una observación supera los 230 puntos, y en el tipo ice, con
+un exponente en los 200 puntos. Estadísticamente, esto sugiere que la
+resistencia especial es una capacidad de especialización individual que
+genera asimetrías positivas marcadas.
+
+\section{Grafico de puntos de Velocidad}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-17-1} \end{center}
+
+El análisis de la velocidad revela una distribución dinámica con una
+especialización clara en los tipos electric, flying y dragon, los cuales
+consolidan las medianas más elevadas del conjunto de datos. A diferencia
+de las estadísticas de ataque o defensa, la velocidad se caracteriza por
+presentar rangos intercuartílicos y bigotes más extensos en casi todas
+las categorías, lo que denota una alta dispersión intrínseca; esto
+implica que el tipo elemental es un predictor menos preciso para la
+velocidad que para otras variables físicas. Sin embargo, la escasez de
+valores atípicos extremos con la excepción notable del tipo Eléctrico---
+sugiere que la rapidez de las especies se distribuye de manera más
+fluida y continua.
 
 \chapter{Conclusiones y Recomendaciones}
 
