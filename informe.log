@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.19)  12 APR 2026 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.19)  12 APR 2026 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -779,7 +779,7 @@ Package hyperref Info: Link coloring ON on input line 73.
 \@outlinefile=\write3
 \openout3 = `informe.out'.
 
-<Latex/Classes/Escudos/ucvlogo.jpg, id=144, 676.02562pt x 668.4975pt>
+<Latex/Classes/Escudos/ucvlogo.jpg, id=180, 676.02562pt x 668.4975pt>
 File: Latex/Classes/Escudos/ucvlogo.jpg Graphic file (type jpg)
 <use Latex/Classes/Escudos/ucvlogo.jpg>
 Package pdftex.def Info: Latex/Classes/Escudos/ucvlogo.jpg  used on input line 
@@ -790,7 +790,7 @@ Overfull \hbox (0.96022pt too wide) in paragraph at lines 75--75
  [] 
  []
 
-<Latex/Classes/Escudos/faces.png, id=145, 346.29375pt x 200.75pt>
+<Latex/Classes/Escudos/faces.png, id=181, 346.29375pt x 200.75pt>
 File: Latex/Classes/Escudos/faces.png Graphic file (type png)
 <use Latex/Classes/Escudos/faces.png>
 Package pdftex.def Info: Latex/Classes/Escudos/faces.png  used on input line 75
@@ -957,7 +957,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 771.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 774.
-<informe_files/figure-latex/unnamed-chunk-12-1.pdf, id=289, 453.695pt x 320.196
+<informe_files/figure-latex/unnamed-chunk-12-1.pdf, id=335, 453.695pt x 320.196
 24pt>
 File: informe_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
 
@@ -973,7 +973,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 780--791
 [16
 
  <./informe_files/figure-latex/unnamed-chunk-12-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-13-1.pdf, id=303, 453.695pt x 320.196
+<informe_files/figure-latex/unnamed-chunk-13-1.pdf, id=348, 453.695pt x 320.196
 24pt>
 File: informe_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 
@@ -989,7 +989,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 796--804
 LaTeX Info: Redefining \. on input line 805.
 LaTeX Info: Redefining \% on input line 805.
 [17 <./informe_files/figure-latex/unnamed-chunk-13-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-14-1.pdf, id=315, 453.695pt x 320.196
+<informe_files/figure-latex/unnamed-chunk-14-1.pdf, id=360, 453.695pt x 320.196
 24pt>
 File: informe_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 
@@ -1002,7 +1002,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 809--821
 
  []
 
-<informe_files/figure-latex/unnamed-chunk-15-1.pdf, id=316, 453.695pt x 320.196
+<informe_files/figure-latex/unnamed-chunk-15-1.pdf, id=361, 453.695pt x 320.196
 24pt>
 File: informe_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
 
@@ -1013,7 +1013,7 @@ d on input line 824.
 LaTeX Info: Redefining \. on input line 824.
 LaTeX Info: Redefining \% on input line 824.
 [18 <./informe_files/figure-latex/unnamed-chunk-14-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-16-1.pdf, id=328, 453.695pt x 320.196
+<informe_files/figure-latex/unnamed-chunk-16-1.pdf, id=373, 453.695pt x 320.196
 24pt>
 File: informe_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type pdf)
 
@@ -1024,7 +1024,7 @@ d on input line 839.
 LaTeX Info: Redefining \. on input line 839.
 LaTeX Info: Redefining \% on input line 839.
 [19 <./informe_files/figure-latex/unnamed-chunk-15-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-17-1.pdf, id=340, 453.695pt x 320.196
+<informe_files/figure-latex/unnamed-chunk-17-1.pdf, id=385, 453.695pt x 320.196
 24pt>
 File: informe_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pdf)
 
@@ -1035,7 +1035,7 @@ d on input line 855.
 LaTeX Info: Redefining \. on input line 855.
 LaTeX Info: Redefining \% on input line 855.
 [20 <./informe_files/figure-latex/unnamed-chunk-16-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-18-1.pdf, id=352, 459.7175pt x 313.17
+<informe_files/figure-latex/unnamed-chunk-18-1.pdf, id=397, 459.7175pt x 313.17
 pt>
 File: informe_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type pdf)
 
@@ -1046,7 +1046,7 @@ d on input line 871.
 LaTeX Info: Redefining \. on input line 871.
 LaTeX Info: Redefining \% on input line 871.
 [21 <./informe_files/figure-latex/unnamed-chunk-17-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-19-1.pdf, id=365, 464.73625pt x 315.1
+<informe_files/figure-latex/unnamed-chunk-19-1.pdf, id=410, 464.73625pt x 315.1
 775pt>
 File: informe_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pdf)
 
@@ -1057,7 +1057,7 @@ d on input line 890.
 LaTeX Info: Redefining \. on input line 890.
 LaTeX Info: Redefining \% on input line 890.
 [22 <./informe_files/figure-latex/unnamed-chunk-18-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-20-1.pdf, id=382, 459.7175pt x 315.17
+<informe_files/figure-latex/unnamed-chunk-20-1.pdf, id=427, 459.7175pt x 315.17
 75pt>
 File: informe_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type pdf)
 
@@ -1068,7 +1068,7 @@ d on input line 906.
 LaTeX Info: Redefining \. on input line 906.
 LaTeX Info: Redefining \% on input line 906.
 [23 <./informe_files/figure-latex/unnamed-chunk-19-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-21-1.pdf, id=399, 459.7175pt x 313.17
+<informe_files/figure-latex/unnamed-chunk-21-1.pdf, id=445, 459.7175pt x 313.17
 pt>
 File: informe_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file (type pdf)
 
@@ -1079,7 +1079,7 @@ d on input line 924.
 LaTeX Info: Redefining \. on input line 924.
 LaTeX Info: Redefining \% on input line 924.
 [24 <./informe_files/figure-latex/unnamed-chunk-20-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-22-1.pdf, id=416, 459.7175pt x 313.17
+<informe_files/figure-latex/unnamed-chunk-22-1.pdf, id=462, 459.7175pt x 313.17
 pt>
 File: informe_files/figure-latex/unnamed-chunk-22-1.pdf Graphic file (type pdf)
 
@@ -1090,7 +1090,7 @@ d on input line 945.
 LaTeX Info: Redefining \. on input line 945.
 LaTeX Info: Redefining \% on input line 945.
 [25 <./informe_files/figure-latex/unnamed-chunk-21-1.pdf>]
-<informe_files/figure-latex/unnamed-chunk-23-1.pdf, id=434, 459.7175pt x 313.17
+<informe_files/figure-latex/unnamed-chunk-23-1.pdf, id=479, 459.7175pt x 313.17
 pt>
 File: informe_files/figure-latex/unnamed-chunk-23-1.pdf Graphic file (type pdf)
 
@@ -1101,54 +1101,153 @@ d on input line 962.
 LaTeX Info: Redefining \. on input line 962.
 LaTeX Info: Redefining \% on input line 962.
 [26 <./informe_files/figure-latex/unnamed-chunk-22-1.pdf>]
-LaTeX Info: Redefining \. on input line 964.
-LaTeX Info: Redefining \% on input line 964.
+<informe_files/figure-latex/unnamed-chunk-24-1.pdf, id=496, 459.7175pt x 313.17
+pt>
+File: informe_files/figure-latex/unnamed-chunk-24-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-24-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-24-1.pdf  use
+d on input line 978.
+(pdftex.def)             Requested size: 371.30594pt x 252.95428pt.
+LaTeX Info: Redefining \. on input line 978.
+LaTeX Info: Redefining \% on input line 978.
 [27 <./informe_files/figure-latex/unnamed-chunk-23-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-25-1.pdf, id=514, 460.72125pt x 313.1
+7pt>
+File: informe_files/figure-latex/unnamed-chunk-25-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-25-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-25-1.pdf  use
+d on input line 997.
+(pdftex.def)             Requested size: 371.30594pt x 252.39041pt.
+LaTeX Info: Redefining \. on input line 997.
+LaTeX Info: Redefining \% on input line 997.
+[28 <./informe_files/figure-latex/unnamed-chunk-24-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-26-1.pdf, id=531, 459.7175pt x 315.17
+75pt>
+File: informe_files/figure-latex/unnamed-chunk-26-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-26-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-26-1.pdf  use
+d on input line 1015.
+(pdftex.def)             Requested size: 371.30594pt x 254.5758pt.
+LaTeX Info: Redefining \. on input line 1015.
+LaTeX Info: Redefining \% on input line 1015.
+[29 <./informe_files/figure-latex/unnamed-chunk-25-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-27-1.pdf, id=548, 459.7175pt x 313.17
+pt>
+File: informe_files/figure-latex/unnamed-chunk-27-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-27-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-27-1.pdf  use
+d on input line 1034.
+(pdftex.def)             Requested size: 371.30594pt x 252.95428pt.
+LaTeX Info: Redefining \. on input line 1034.
+LaTeX Info: Redefining \% on input line 1034.
+[30 <./informe_files/figure-latex/unnamed-chunk-26-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-28-1.pdf, id=566, 459.7175pt x 315.17
+75pt>
+File: informe_files/figure-latex/unnamed-chunk-28-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-28-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-28-1.pdf  use
+d on input line 1049.
+(pdftex.def)             Requested size: 371.30594pt x 254.5758pt.
+LaTeX Info: Redefining \. on input line 1049.
+LaTeX Info: Redefining \% on input line 1049.
+[31 <./informe_files/figure-latex/unnamed-chunk-27-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-29-1.pdf, id=583, 459.7175pt x 313.17
+pt>
+File: informe_files/figure-latex/unnamed-chunk-29-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-29-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-29-1.pdf  use
+d on input line 1067.
+(pdftex.def)             Requested size: 371.30594pt x 252.95428pt.
+LaTeX Info: Redefining \. on input line 1067.
+LaTeX Info: Redefining \% on input line 1067.
+[32 <./informe_files/figure-latex/unnamed-chunk-28-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-30-1.pdf, id=600, 464.73625pt x 313.1
+7pt>
+File: informe_files/figure-latex/unnamed-chunk-30-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-30-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-30-1.pdf  use
+d on input line 1085.
+(pdftex.def)             Requested size: 371.30594pt x 250.21616pt.
+LaTeX Info: Redefining \. on input line 1085.
+LaTeX Info: Redefining \% on input line 1085.
+[33 <./informe_files/figure-latex/unnamed-chunk-29-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-31-1.pdf, id=618, 459.7175pt x 313.17
+pt>
+File: informe_files/figure-latex/unnamed-chunk-31-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-31-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-31-1.pdf  use
+d on input line 1100.
+(pdftex.def)             Requested size: 371.30594pt x 252.95428pt.
+LaTeX Info: Redefining \. on input line 1100.
+LaTeX Info: Redefining \% on input line 1100.
+[34 <./informe_files/figure-latex/unnamed-chunk-30-1.pdf>]
+<informe_files/figure-latex/unnamed-chunk-32-1.pdf, id=635, 464.73625pt x 318.1
+8875pt>
+File: informe_files/figure-latex/unnamed-chunk-32-1.pdf Graphic file (type pdf)
+
+<use informe_files/figure-latex/unnamed-chunk-32-1.pdf>
+Package pdftex.def Info: informe_files/figure-latex/unnamed-chunk-32-1.pdf  use
+d on input line 1116.
+(pdftex.def)             Requested size: 371.30594pt x 254.22603pt.
+LaTeX Info: Redefining \. on input line 1116.
+LaTeX Info: Redefining \% on input line 1116.
+[35 <./informe_files/figure-latex/unnamed-chunk-31-1.pdf>]
+LaTeX Info: Redefining \. on input line 1118.
+LaTeX Info: Redefining \% on input line 1118.
+[36 <./informe_files/figure-latex/unnamed-chunk-32-1.pdf>]
 Cap\'{\i }tulo 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 966--967
+Underfull \hbox (badness 10000) in paragraph at lines 1120--1121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
+Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--971
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--975
+Underfull \hbox (badness 10000) in paragraph at lines 1128--1129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
 
  []
 
-[28
+[37
 
 ]
 Ap\'{e}ndice A.
-[29
+[38
 
 ]
 Ap\'{e}ndice B.
-[30
+[39
 
 ]
 Ap\'{e}ndice C.
 No file informe.bbl.
-[31
+[40
 
 ] (./informe.aux
 LaTeX Info: Redefining \. on input line 9.
@@ -1165,13 +1264,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `informe.out' has not changed.
-(rerunfilecheck)             Checksum: C7FE0422BBD7C3BA26ACABC3B0881D9C;7173.
+(rerunfilecheck)             Checksum: 07C5119AC18AD39DCDDD0BE3ED253B29;9343.
  ) 
 Here is how much of TeX's memory you used:
- 20806 strings out of 474222
- 349245 string characters out of 5748733
+ 20950 strings out of 474222
+ 356175 string characters out of 5748733
  1954975 words of memory out of 5000000
- 42625 multiletter control sequences out of 15000+600000
+ 42751 multiletter control sequences out of 15000+600000
  569719 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  105i,12n,107p,433b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1186,10 +1285,10 @@ s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on informe.pdf (35 pages, 552888 bytes).
+Output written on informe.pdf (44 pages, 641440 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 453 compressed objects within 5 object streams
- 85 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 622 compressed objects within 7 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 468 words of extra memory for PDF output out of 10000 (max. 10000000)
 
