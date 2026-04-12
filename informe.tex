@@ -747,7 +747,7 @@ Type\_1 & Variables & Coeficiente \\
 Bug & HP y Defense & 0.29 \\
 Dark & Attack y Speed & 0.39 \\
 Dragon & Attack y Speed & 0.50 \\
-Electric & HP y Defense & 0.68 \\
+Electric & HP y Sp.Def & 0.66 \\
 Fairy & Sp.Def y Defense & 0.43 \\
 Fighting & Attack y Defense & 0.67 \\
 Fire & HP y Attack & 0.67 \\
@@ -871,23 +871,95 @@ fluida y continua.
 \begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-18-1} \end{center}
 
 Al realizar el análisis de regresión lineal entre las variables vida y
-defensa, se observa una correlación positiva moderada. La trayectoria de
-la recta de ajuste sugiere que existe una tendencia proporcional entre
-ambos atributos, validando la hipótesis de que el incremento en la vida
-suele estar asociado a un refuerzo en la defensa física. Sin embargo, la
-dispersión de los puntos y la presencia de valores atípicos con defensas
-extremas y baja salud indican que la relación no es estrictamente
-interdependiente para todas las especies. A pesar de tener una
-correlacion lineal moderada, no implica que los pokemones de tipo bicho
-sean ideales para categorizarlos como ``Muros'' debido a que si nos
-devolvemos a las graficas de sus medias podemos observar que en cuanto a
-vida y defensa es uno de los tipos con menor media. Entonces el uso de
-un pokemon tipo bicho basado en sus estadisticas, no seria una buena
-opcion debido a bajos numeros.
+defensa de los pokemones tipo bicho, se observa una correlación positiva
+moderada. La trayectoria de la recta de ajuste sugiere que existe una
+tendencia proporcional entre ambos atributos, validando la hipótesis de
+que el incremento en la vida suele estar asociado a un refuerzo en la
+defensa física. Sin embargo, la dispersión de los puntos y la presencia
+de valores atípicos con defensas extremas y baja salud indican que la
+relación no es estrictamente interdependiente para todas las especies. A
+pesar de tener una correlacion lineal moderada, no implica que los
+pokemones de tipo bicho sean ideales para categorizarlos como ``Muros''
+debido a que si nos devolvemos a las graficas de sus medias podemos
+observar que en cuanto a vida y defensa es uno de los tipos con menor
+media. Entonces el uso de un pokemon tipo bicho basado en sus
+estadisticas, no seria una buena opcion debido a bajos numeros.
 
 \section{Correlacion de el Tipo Siniestro}
 
 \begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-19-1} \end{center}
+
+El análisis de correlación entre las variables ataque y velocidad del
+tipo siniestro revela una relación lineal positiva, sugiriendo que el
+incremento en la potencia ofensiva tiende a estar asociado con una mayor
+agilidad base. No obstante, el diagrama de dispersión muestra una
+variabilidad creciente a medida que aumenta el valor de ataque, esta
+dispersión indica la coexistencia de dos perfiles competitivos
+diferenciados, atacantes veloces y atacantes lentos de gran resistencia.
+Ademas de que si vemos sus medias en estas dos variables se encuentran
+en una buena posicion, lo que fortalece la idea de que algunos pokemones
+siniestros sean categorizados ``atacantes'', resultando en una excelente
+pieza para un equipo competitivo pokemon.
+
+\section{Correlacion de el Tipo Dragon}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-20-1} \end{center}
+
+El análisis de regresión entre ataque y velocidad de los tipo dragon en
+esta escala ajustada confirma una correlación positiva moderada, donde
+la línea de ajuste describe con mayor precisión la tendencia central de
+la muestra. La distribución de los puntos revela que la especialización
+ofensiva no penaliza necesariamente la agilidad, sino que existe un
+núcleo de especies que escalan ambos atributos de manera simultánea. No
+obstante, la persistencia de casos atípicos en los cuadrantes de alto
+ataque y baja velocidad refuerza la necesidad de un análisis segmentado,
+ya que estas desviaciones representan roles competitivos específicos. Al
+igual que el tipo siniestro, el tipo dragon tambien presenta una buena
+prensencia en sus medias en cuanto ataque y velocidad, lo que respalda
+de que algunos de los pokemones tipo dragon sean usados como
+``atacantes''.
+
+\section{Correlacion de el Tipo Electric}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-21-1} \end{center}
+
+La relación entre la Vida y la Defensa Especial de los tipo electricos
+exhibe la correlación lineal más pronunciada y consistente de todas las
+variables analizadas. El diagrama de dispersión muestra una agrupación
+compacta de las observaciones en torno a la recta de regresión, lo que
+sugiere un alto coeficiente de pearson y una interdependencia robusta en
+el diseño de las estadísticas base. A diferencia de las métricas
+físicas, esta distribución carece de valores atípicos extremos,
+presentando una varianza uniforme que refuerza la fiabilidad del modelo.
+A pesar de que la vida los pokemones electricos no es su fuerte, podemos
+observar como la grafica nos indica que podrian ser excelentes ``muros''
+en cuanto ataques especiales, pero existe una tendencia que ocurre en
+los tipo electricos, los tipo electrico suelen sacrificar las
+estadisticas base de sus vidas para potenciar otras como el caso de la
+velocidad, como vemos en el grafico de las medias de velocidad donde los
+electricos se situan como la mayor media, indicando que tambien podrian
+ser unos buenos ``atacantes''.
+
+\section{Correlacion de el Tipo Hada}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-22-1} \end{center}
+
+El análisis para el tipo hada, se observa una correlación positiva
+moderada entre la defensa y la defensa especial. La trayectoria de la
+recta de regresión sugiere que este tipo elemental tiende a un
+desarrollo equilibrado de sus facultades defensivas, consolidando el rol
+de `Muro mixto' en la mayoría de sus integrantes. Sin embargo, la
+amplitud del intervalo de confianza y la presencia de especialistas con
+alta resistencia especial pero defensa física moderada indican que,
+aunque existe una tendencia hacia la proporcionalidad, la variabilidad
+individual sigue siendo un factor determinante. El tipo hada podria ser
+ideal en cualquier equipo pokemon debido a la alta presencia que tienen
+los pokemones dragones debido que son uno de los mejores tipos en cuanto
+al rol ``atacantes'' se habla.
+
+\section{Correlacion de el Tipo lucha}
+
+\begin{center}\includegraphics[width=0.9\linewidth,]{informe_files/figure-latex/unnamed-chunk-23-1} \end{center}
 
 \chapter{Conclusiones y Recomendaciones}
 

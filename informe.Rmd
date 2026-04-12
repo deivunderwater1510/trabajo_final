@@ -412,7 +412,7 @@ df %>%
       Type_1 == "Bug"  ~ "HP y Defense",
       Type_1 == "Dark" ~ "Attack y Speed",
       Type_1 == "Dragon" ~ "Attack y Speed",
-      Type_1 == "Electric"  ~ "HP y Defense",
+      Type_1 == "Electric"  ~ "HP y Sp.Def",
       Type_1 == "Fairy"  ~ "Sp.Def y Defense",
       Type_1 == "Fighting"  ~ "Attack y Defense",
       Type_1 == "Fire"  ~ "HP y Attack",
@@ -432,7 +432,7 @@ df %>%
       Type_1 == "Bug"  ~ round(cor(HP, Defense, method = "pearson"),2),
       Type_1 == "Dark" ~ round(cor(Attack, Speed, method = "pearson"),2),
       Type_1 == "Dragon" ~ round(cor(Attack, Speed, method = "pearson"),2),
-      Type_1 == "Electric" ~ round(cor(HP, Defense, method = "pearson"),2),
+      Type_1 == "Electric" ~ round(cor(HP, Sp.Def, method = "pearson"),2),
       Type_1 == "Fairy" ~ round(cor(Sp.Def, Defense, method = "pearson"),2),
       Type_1 == "Fighting" ~ round(cor(Attack, Defense, method = "pearson"),2),
       Type_1 == "Fire" ~ round(cor(HP, Attack, method = "pearson"),2),
@@ -577,7 +577,79 @@ darksito <- df %>%
 ```
 
 El análisis de correlación entre las variables ataque y velocidad del tipo siniestro revela una relación lineal positiva, sugiriendo que el incremento en la potencia ofensiva tiende a estar asociado con una mayor agilidad base. No obstante, el diagrama de dispersión muestra una variabilidad creciente a medida que aumenta el valor de ataque, esta dispersión indica la coexistencia de dos perfiles competitivos diferenciados, atacantes veloces y atacantes lentos de gran resistencia.
-Ademas de que si vemos sus medias en estas dos variables se encuentran en una buena posicion, lo que fortalece la idea de que algunos pokemones siniestros sean categorizados "tanques", resultando en una excelente pieza para un equipo competitivo pokemon.
+Ademas de que si vemos sus medias en estas dos variables se encuentran en una buena posicion, lo que fortalece la idea de que algunos pokemones siniestros sean categorizados "atacantes", resultando en una excelente pieza para un equipo competitivo pokemon.
+
+\section{Correlacion de el Tipo Dragon}
+
+```{r}
+dragonsito <- df %>%
+  filter(Type_1 == "Dragon") 
+
+  ggplot(dragonsito, aes(x = Attack, y = Speed)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    x = "Ataque",
+    y = "Velocidad",
+   )+
+  theme_minimal()
+```
+
+El análisis de regresión entre ataque y velocidad de los tipo dragon en esta escala ajustada confirma una correlación positiva moderada, donde la línea de ajuste describe con mayor precisión la tendencia central de la muestra. La distribución de los puntos revela que la especialización ofensiva no penaliza necesariamente la agilidad, sino que existe un núcleo de especies que escalan ambos atributos de manera simultánea. No obstante, la persistencia de casos atípicos en los cuadrantes de alto ataque y baja velocidad refuerza la necesidad de un análisis segmentado, ya que estas desviaciones representan roles competitivos específicos. Al igual que el tipo siniestro, el tipo dragon tambien presenta una buena prensencia en sus medias en cuanto ataque y velocidad, lo que respalda de que algunos de los pokemones tipo dragon sean usados como "atacantes".
+
+\section{Correlacion de el Tipo Electric}
+
+```{r}
+Electricos <- df %>%
+  filter(Type_1 == "Electric") 
+
+  ggplot(Electricos, aes(x = HP, y = Sp.Def)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    x = "Vida",
+    y = "Defensa especial",
+   )+
+  theme_minimal()
+```
+
+La relación entre la Vida y la Defensa Especial de los tipo electricos exhibe la correlación lineal más pronunciada y consistente de todas las variables analizadas. El diagrama de dispersión muestra una agrupación compacta de las observaciones en torno a la recta de regresión, lo que sugiere un alto coeficiente de pearson y una interdependencia robusta en el diseño de las estadísticas base. A diferencia de las métricas físicas, esta distribución carece de valores atípicos extremos, presentando una varianza uniforme que refuerza la fiabilidad del modelo. A pesar de que la vida los pokemones electricos no es su fuerte, podemos observar como la grafica nos indica que podrian ser excelentes "muros" en cuanto ataques especiales, pero existe una tendencia que ocurre en los tipo electricos, los tipo electrico suelen sacrificar las estadisticas base de sus vidas para potenciar otras como el caso de la velocidad, como vemos en el grafico de las medias de velocidad donde los electricos se situan como la mayor media, indicando que tambien podrian ser unos buenos "atacantes". 
+
+\section{Correlacion de el Tipo Hada}
+
+```{r}
+hada <- df %>%
+  filter(Type_1 == "Fairy") 
+
+  ggplot(hada, aes(x = Defense, y = Sp.Def)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    x = "Defense",
+    y = "Defensa especial",
+   )+
+  theme_minimal()
+```
+
+El análisis para el tipo hada, se observa una correlación positiva moderada entre la defensa y la defensa especial. La trayectoria de la recta de regresión sugiere que este tipo elemental tiende a un desarrollo equilibrado de sus facultades defensivas, consolidando el rol de 'Muro mixto' en la mayoría de sus integrantes. Sin embargo, la amplitud del intervalo de confianza y la presencia de especialistas con alta resistencia especial pero defensa física moderada indican que, aunque existe una tendencia hacia la proporcionalidad, la variabilidad individual sigue siendo un factor determinante. El tipo hada podria ser ideal en cualquier equipo pokemon debido a la alta presencia que tienen los pokemones dragones debido que son uno de los mejores tipos en cuanto al rol "atacantes" se habla. 
+
+\section{Correlacion de el Tipo lucha}
+
+```{r}
+rocky <- df %>%
+  filter(Type_1 == "Fighting") 
+
+  ggplot(rocky, aes(x = Defense, y = Attack)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    x = "Defense",
+    y = "Ataque",
+   )+
+  theme_minimal()
+```
+
+El análisis de correlación lineal para el tipo lucha revela una asociación positiva y robusta entre el ataque y defensa. La disposición de los datos en el diagrama de dispersión confirma que este grupo tiende a una especialización física dual, donde el incremento en la capacidad ofensiva es correspondido por un fortalecimiento en la resistencia. La relativa estrechez del intervalo de confianza en los rangos centrales valida la estabilidad del modelo, posicionando al tipo Lucha como uno de los sectores más predecibles estadísticamente. Nos encontramos con el primer "tanque" de este estudio, siendo capaz de aguantar golpes fisicos y contratacar con su capacidad fisica, el tipo lucha es el ejemplo perfecto para describir la categoria "tanques". 
 
 
 \chapter{Conclusiones y Recomendaciones}
