@@ -454,20 +454,6 @@ df %>%
 
 \
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \chapter{Análisis de Resultados}
 
 {\small Este capítulo presenta los resultados obtenidos al aplicar las metodologías descritas en el capítulo anterior, así como del análisis estadístico descriptivo de las variables estudiadas y las ventajas y desventajas al aplicar dichos tests.}
@@ -555,6 +541,44 @@ ggplot(data = df, aes(x = reorder(Type_1, Speed, FUN = median), y = Speed, fill 
 ```
 
 El análisis de la velocidad revela una distribución dinámica con una especialización clara en los tipos electric, flying y dragon, los cuales consolidan las medianas más elevadas del conjunto de datos. A diferencia de las estadísticas de ataque o defensa, la velocidad se caracteriza por presentar rangos intercuartílicos y bigotes más extensos en casi todas las categorías, lo que denota una alta dispersión intrínseca; esto implica que el tipo elemental es un predictor menos preciso para la velocidad que para otras variables físicas. Sin embargo, la escasez de valores atípicos extremos con la excepción notable del tipo Eléctrico— sugiere que la rapidez de las especies se distribuye de manera más fluida y continua.
+
+\section{Correlacion de el Tipo bicho}
+
+```{r}
+bichito <- df %>%
+  filter(Type_1 == "Bug") 
+
+  ggplot(bichito, aes(x = HP, y = Defense)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    x = "Vida",
+    y = "Defensa",
+   )+
+  theme_minimal()
+```
+
+Al realizar el análisis de regresión lineal entre las variables vida y defensa de los pokemones tipo bicho, se observa una correlación positiva moderada. La trayectoria de la recta de ajuste sugiere que existe una tendencia proporcional entre ambos atributos, validando la hipótesis de que el incremento en la vida suele estar asociado a un refuerzo en la defensa física. Sin embargo, la dispersión de los puntos y la presencia de valores atípicos con defensas extremas y baja salud indican que la relación no es estrictamente interdependiente para todas las especies. A pesar de tener una correlacion lineal moderada, no implica que los pokemones de tipo bicho sean ideales para categorizarlos como "Muros" debido a que si nos devolvemos a las graficas de sus medias podemos observar que en cuanto a vida y defensa es uno de los tipos con menor media. Entonces el uso de un pokemon tipo bicho basado en sus estadisticas, no seria una buena opcion debido a bajos numeros. 
+
+\section{Correlacion de el Tipo Siniestro}
+
+```{r}
+darksito <- df %>%
+  filter(Type_1 == "Dark") 
+
+  ggplot(darksito, aes(x = Attack, y = Speed)) +
+  geom_point(alpha = 0.5, color = "steelblue") +
+  geom_smooth(method = "lm", color = "red") +
+  labs(
+    x = "Ataque",
+    y = "Velocidad",
+   )+
+  theme_minimal()
+```
+
+El análisis de correlación entre las variables ataque y velocidad del tipo siniestro revela una relación lineal positiva, sugiriendo que el incremento en la potencia ofensiva tiende a estar asociado con una mayor agilidad base. No obstante, el diagrama de dispersión muestra una variabilidad creciente a medida que aumenta el valor de ataque, esta dispersión indica la coexistencia de dos perfiles competitivos diferenciados, atacantes veloces y atacantes lentos de gran resistencia.
+Ademas de que si vemos sus medias en estas dos variables se encuentran en una buena posicion, lo que fortalece la idea de que algunos pokemones siniestros sean categorizados "tanques", resultando en una excelente pieza para un equipo competitivo pokemon.
+
 
 \chapter{Conclusiones y Recomendaciones}
 
