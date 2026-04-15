@@ -59,6 +59,29 @@ library(usethis)
 Históricamente, la experiencia de muchos jugadores de Pokémon comenzó con una estrategia novata, que consiste en fortalecer a un único pokemon, casi siempre el pokemon "favorito" hasta que su nivel superara cualquier obstáculo por fuerza bruta, "Muchos jugadores principiantes enfrentan dificultades para equilibrar su equipo, lo que resulta en un inicial con nivel excesivo frente al resto (Reddit, 2024).". Sin embargo, al analizar el juego desde una perspectiva técnica y competitiva, surge una interrogante fundamental ¿cómo se construye una formación verdaderamente equilibrada?
 El presente trabajo trasciende la preferencia individual para proponer un modelo estadístico de selección. El objetivo es ofrecer, tanto a jugadores veteranos como a novatos, una metodología clara para estructurar equipos basados en sus tipologías predilectas, garantizando que la sinergia y las estadísticas base trabajen en favor de un rendimiento óptimo en combate. 
 
+\section{Estructura del informe}
+
+\textbf{1.}Capítulo I: El Problema\
+
+En el entorno competitivo de Pokémon, la victoria no depende únicamente del azar, sino de la optimización técnica de las estadísticas base (BST) y la mitigación de vulnerabilidades elementales.\
+
+\textbf{2.}Capítulo II: Marco Teórico\
+
+Se establecen las bases conceptuales necesarias para abordar el estudio del ecosistema Pokémon. Se establecen las bases conceptuales necesarias para abordar el estudio del ecosistema Pokémon.\
+
+\textbf{3.}Capítulo III: Metodología\
+
+Este capítulo expresa el procedimiento técnico de cómo manejar los datos obtenidos de las bases de datos competitivas.\
+
+\textbf{4.}Capítulo IV: Análisis y Resultados\
+
+Se presentan los hallazgos mediante la aplicación de medidas de tendencia central y dispersión para evaluar la especialización de cada tipo de Pokémon.\
+
+\textbf{5.}Capítulo V: Conclusiones y Recomendaciones.\
+
+Ya teniendo los resultados, podemos identificar que roles podrian adoptar comodamente cada tipo pokemon, asi como tener en cuenta las sinergia de tu equipo, para maximizar esa probabilidad de victoria.\
+
+
 \chapter{Planteamiento del Problema}
 
 Desde su creación, la franquicia Pokémon ha evolucionado hacia un ecosistema competitivo de alta complejidad donde la victoria no depende del azar, sino de la optimización matemática de recursos. Para un entrenador o analista, el desafío principal radica en la selección de un equipo equilibrado, enfrentándose a una variabilidad extrema en las combinaciones de tipos y naturalezas que definen el rendimiento en combate.
@@ -67,7 +90,7 @@ Desde una perspectiva de análisis estadístico, el problema no consiste solo en
 
 La ausencia de un análisis descriptivo que cuantifique cómo los tipos elementales condicionan la esperanza de desempeño en cada estadística genera ineficiencias en la toma de decisiones tácticas y en la construcción de estrategias competitivas a largo plazo.
 
-Dado que un buen equipo depende de la estabilidad y especializaci´on de sus pokemones, se plantea las siguientes preguntas de investigacion::
+Dado que un buen equipo depende de la estabilidad y especializacion de sus pokemones, se plantea las siguientes preguntas de investigacion::
 
 
 \textbf{1.}	¿Qué tipos ofrecen las estadísticas más ofensivas?
@@ -458,9 +481,7 @@ df %>%
 
 \
 
-\chapter{Análisis de Resultados}
-
-{\small Este capítulo presenta los resultados obtenidos al aplicar las metodologías descritas en el capítulo anterior, así como del análisis estadístico descriptivo de las variables estudiadas y las ventajas y desventajas al aplicar dichos tests.}
+\chapter{Análisis de Resultados} 
 
 \section{Grafico de puntos de vida}
 ```{r}
