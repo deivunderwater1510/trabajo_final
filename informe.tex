@@ -117,15 +117,17 @@ colectivo.             % Aquí se pega el texto que escribiste en el YAML
 Históricamente, la experiencia de muchos jugadores de Pokémon comenzó
 con una estrategia novata, que consiste en fortalecer a un único
 pokemon, casi siempre el pokemon ``favorito'' hasta que su nivel
-superara cualquier obstáculo por fuerza bruta. Sin embargo, al analizar
-el juego desde una perspectiva técnica y competitiva, surge una
-interrogante fundamental ¿cómo se construye una formación verdaderamente
-equilibrada? El presente trabajo trasciende la preferencia individual
-para proponer un modelo estadístico de selección. El objetivo es
-ofrecer, tanto a jugadores veteranos como a novatos, una metodología
-clara para estructurar equipos basados en sus tipologías predilectas,
-garantizando que la sinergia y las estadísticas base trabajen en favor
-de un rendimiento óptimo en combate.
+superara cualquier obstáculo por fuerza bruta, ``Muchos jugadores
+principiantes enfrentan dificultades para equilibrar su equipo, lo que
+resulta en un inicial con nivel excesivo frente al resto (Reddit,
+2024).''. Sin embargo, al analizar el juego desde una perspectiva
+técnica y competitiva, surge una interrogante fundamental ¿cómo se
+construye una formación verdaderamente equilibrada? El presente trabajo
+trasciende la preferencia individual para proponer un modelo estadístico
+de selección. El objetivo es ofrecer, tanto a jugadores veteranos como a
+novatos, una metodología clara para estructurar equipos basados en sus
+tipologías predilectas, garantizando que la sinergia y las estadísticas
+base trabajen en favor de un rendimiento óptimo en combate.
 
 \chapter{Planteamiento del Problema}
 
@@ -151,7 +153,7 @@ genera ineficiencias en la toma de decisiones tácticas y en la
 construcción de estrategias competitivas a largo plazo.
 
 Dado que un buen equipo depende de la estabilidad y especializaci´on de
-sus pokemones, se plantea las siguientes preguntas de investigaci´on::
+sus pokemones, se plantea las siguientes preguntas de investigacion::
 
 \textbf{1.} ¿Qué tipos ofrecen las estadísticas más ofensivas?
 
@@ -184,7 +186,7 @@ datos.\\
 
 \subsection{Objetivo General}
 \begin{itemize}
-  \item{Analizar estadísticamente la distribución de las estadísticas base (HP, Atk, Def, Sp. Atk, Sp. Def y Speed) de cada tipologia pokemon para determinar patrones de especialización por rol, con el fin de fundamentar la toma de decisiones estratégicas en la construcción de equipos competitivos equilibrados.}
+  \item{Analizar estadísticamente la distribución de las estadísticas base de cada tipologia pokemon para determinar patrones de especialización por rol, con el fin de fundamentar la toma de decisiones estratégicas en la construcción de equipos competitivos equilibrados.}
 \end{itemize}
 
 \subsection{Objetivos Específicos}
@@ -251,6 +253,9 @@ distribución de los cuantiles de las estadísticas base:
  \item {Tanques: Pokemones que presentan un equilibrio estadístico, manteniendo una media elevada tanto en puntos de salud (HP) como en estadísticas ofensivas, permitiendo el intercambio de daño prolongado.}
  \item {Muros: Categoría definida por una baja dispersión en valores altos de Defensa y Defensa Especial, cuya función principal es la absorción de daño y la interrupción del ritmo del oponente.} 
  \end{itemize}
+
+Smogon University. (s.f.). The Pokemon Dictionary. Recuperado el 15 de
+abril de 2024, de smogon.com
 
 \subsection{Estabilidad Estructural y Análisis de Vulnerabilidad}
 
@@ -360,6 +365,7 @@ permite contrastar las medias y varianzas entre los diversos tipos
 elementales, estableciendo así las superioridades o debilidades
 estadísticas que definen a cada categoría (Atacantes, Tanques, Muros).\\
 
+\newpage
 \subsection{Procesamiento y Limpieza de Datos}
 
 \begin{longtable}[]{@{}rrrrrrr@{}}
@@ -1192,17 +1198,73 @@ poder bajarle todos los puntos de salud de un golpe si es necesario.
 
 \chapter{Conclusiones y Recomendaciones}
 
-\textbf{1.-} Conclusion 1 del trabajo de investigación.\\
+\textbf{1.-} Las estadísticas ofensivas de las tipologías pokemon
+demuestran que los tipos dragón poseen las medias de ataque físico más
+elevadas acompañado de una buena velocidad, se consolida como una de las
+mejores opciones para roles de atacantes físicos. Por su parte, el tipo
+psíquico aunque tambien se suele usar como tanque debido a su buena
+defensa especial, lidera el potencial de daño especial y una velocidad
+moderada al igual que los tipo siniestro, seguido de cerca por el tipo
+eléctrico que debido a su alta velocidad lo posicionan como un atacante
+rematador, capaz de asegurar el fuera de combate (K.O.) ante oponentes
+con salud reducida. .\\
 
-\textbf{Recomendación} Recomendación 1 del trabajo de investigación.\\
+\textbf{1.5.-} El tipo volador presenta una alta correlación en cuanto a
+HP y velocidad, lo que indica que tal vez los pokemones tipo volador son
+generalmente buenos para aguantar ataques de los rivales, y siendo
+capaces de atacar y rotar debido a su alta velocidad.\\
 
-\textbf{2.-} Conclusion 2 del trabajo de investigación.\\
+\textbf{Recomendación} Al momento de desarrollar tu equipo y busques
+roles ofensivos es bueno tomar en cuentas estos cuatros tipos que te
+pueden aportar gran poderio.\\
 
-\textbf{Recomendación} Recomendación 2 del trabajo de investigación.\\
+\textbf{2.-} Las estadisticas tambien nos ha demostrado pokemones con
+una notable capacidad de resistencia y contraataque, como los tipo lucha
+que cuentan con un gran correlacion en cuanto a su ataque y defensa
+fisica se tratan, siendo una buena opcion si buscas un ``tanque''
+fisico, como tambien lo son tipos como el agua, fuego, veneno y la
+tierra, en cuanto si buscas ``tanques'' que puedan ayudar a aguantar
+ataques especiales y aun cuenten con estadisticas moderas en sus ataque
+ya sean fisico o especial, podemos encontrarnos con el tipo fantasma
+siendo unos de los mejores en cuanto a media de ataque especial y
+resistencia especial.\\
 
-\textbf{n.-} Conclusion n del trabajo de investigación.\\
+\textbf{Recomendación} Es importante el uso de un pokemon tanque, ya que
+te permite rotar y generar presion en los rivales, lo que te proporciona
+que el rival cambie de pokemon generando tiempo a tu favor.\\
 
-\textbf{Recomendación} Recomendación n del trabajo de investigación.\\
+\textbf{3.-} En cuanto estadisticas defensivas se habla encontramos los
+``muros'' pokemones que cuentan con altos puntos de vida y junto a una
+buena defensa como lo son los pokemones tipos roca, siendo ideales
+debidos a sus buenos puntos de salud acompañado de una excelente de
+defensa, tanto los tipo roca y los tipo acero son escenciales para el
+rol de ``muro'' fisico. En cuanto a ``muros'' especiales podemos
+encontrarnos con pokemones tipo planta capaces de resistir ataque
+especiales, debido a que continen unas medias de defensas moderada,
+finalmente estan los ``muros'' mixtos estos cuentan con buenas
+estadisticas defensivas, como los pokemones hada, normales, y hielo .\\
+
+\textbf{Recomendación}. Debido a que el tipo Bicho presenta, en
+promedio, los valores estadísticos más bajos, su uso en entornos
+competitivos requiere de una selección mucho más rigurosa de casos
+atípicos o ejemplares con habilidades excepcionales.\\
+
+\textbf{4.-} La creacion de un equipo equilibrado depende de cuales
+tipos de pokemon seleccionemos, debido a que existen debilidades y
+resistencias de los pokemones, estos juegan un papel importante en
+cuanto al combate, entonces la idea seria jugar con una alta sinergia de
+equipo y la mitigacion de vulneravilidades para formar un equipo que
+contrarrestre las debilidades de tus pokemones y poder generar daño al
+rival, debido a que un equipo pokemon contiene 6 espacios, entonces un
+equipo equilibrado seria dos unidades de cada rol, permitiendo alcanzar
+un equilibrio sistemico que maximamiza las probabilidades de exito en el
+combate.\\
+
+\textbf{Recomendación}. Si bien este estudio ofrece una base sólida para
+entender las capacidades de un Pokémon, es vital reconocer que las
+estadísticas no son leyes absolutas. El rendimiento real está sujeto a
+múltiples factores, por lo que un ejemplar específico podría no replicar
+exactamente el comportamiento promedio aquí analizado.
 
 \appendix
 \renewcommand{\thechapter}{\Alph{chapter}}
