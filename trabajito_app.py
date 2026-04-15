@@ -111,21 +111,37 @@ with tab2:
 
 
 with tab3:
-    if len(Estadisticas_seleccionadas) > 0 < 3:
+    if len(Estadisticas_seleccionadas) == 2:
             
-            color_map = {"Grass": "#7AC74C","Fire": "#EE8130","Water": "#6390F0","Bug": "#A6B91A","Normal": "#A8A77A","Poison": "#A33EA1","Electric": "#F7D02C","Ground": "#E2BF65", "Fairy": "#D685AD","Fighting": "#C22E28","Psychic": "#F95587","Rock": "#B6A136","Ghost": "#735797","Ice": "#96D9D6","Dragon": "#6F35FC","Dark": "#705746","Steel": "#B7B7CE","Flying": "#A98FF3"}
-            df_corr =  df_filtrado[Estadisticas_seleccionadas]
-            corr = df_corr.corr()
-            
+        color_map = {"Grass": "#7AC74C","Fire": "#EE8130","Water": "#6390F0","Bug": "#A6B91A","Normal": "#A8A77A","Poison": "#A33EA1","Electric": "#F7D02C","Ground": "#E2BF65", "Fairy": "#D685AD","Fighting": "#C22E28","Psychic": "#F95587","Rock": "#B6A136","Ghost": "#735797","Ice": "#96D9D6","Dragon": "#6F35FC","Dark": "#705746","Steel": "#B7B7CE","Flying": "#A98FF3"}
+
+        fig_dis = px.scatter(
+                df_filtrado,
+                x= Estadisticas_seleccionadas [0],
+                y= Estadisticas_seleccionadas [1], 
+                color="Type_1",
+                color_discrete_map=color_map,
+                title= "Relación entre Estadísticas de los pokemon por Tipo",
+                hover_name="Name",
+
+    )
+        fig_dis.update_layout(height=750,)
     
-            fig_corr = px.imshow(
-                    corr,
-                    text_auto=".2f",
-                    aspect="auto",
-                    color_continuous_scale='RdBu_r',
-                    zmin=-1, zmax=1,
-                    title= "Relación entre Estadísticas de los pokemon por Tipo"
+    
+        st.plotly_chart(fig_dis, use_container_width=True)
+        st.divider()
+        st.subheader("Buscador de Pokémon")
 
-        )
+        buscador = st.text_input("Busca ese Pokemon")
+        
+        columnas_interes = ["id", "Name", "HP" ,"Attack","Defense","Sp.Atk","Sp.Def","Speed","Type_1","Type_2"]
 
-            st.plotly_chart(fig_corr, use_container_width=True)
+        if buscador: 
+            df_mostrar = df[df['Name'].str.contains(buscador, case=False)]
+            df_mostrar = df_mostrar[columnas_interes]
+        else:
+            df_mostrar = df[columnas_interes]
+
+        st.dataframe(df_mostrar, use_container_width=True)
+
+
